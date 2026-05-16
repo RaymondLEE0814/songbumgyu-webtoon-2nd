@@ -218,10 +218,10 @@ function collectTree() {
     const sdir = path.join(SRC, section);
     if (!fs.existsSync(sdir)) continue;
     const items = [];
-    // 섹션 직속 md
+    // 섹션 직속 md (README 는 폴더 안내용 메타라서 본문 사이드바에서 제외)
     const direct = fs
       .readdirSync(sdir, { withFileTypes: true })
-      .filter((d) => d.isFile() && d.name.endsWith(".md"))
+      .filter((d) => d.isFile() && d.name.endsWith(".md") && d.name !== "README.md")
       .map((d) => d.name)
       .sort();
     for (const name of direct) {
@@ -237,7 +237,10 @@ function collectTree() {
     for (const sub of subs) {
       const subdir = path.join(sdir, sub);
       const groupItems = [];
-      for (const f of walk(subdir).filter((p) => p.endsWith(".md")).sort()) {
+      const subFiles = walk(subdir)
+        .filter((p) => p.endsWith(".md") && path.basename(p) !== "README.md")
+        .sort();
+      for (const f of subFiles) {
         const rel = path.relative(SRC, f).replaceAll("\\", "/");
         const parts = rel.split("/");
         const stem = parts[parts.length - 1].replace(/\.md$/, "");
