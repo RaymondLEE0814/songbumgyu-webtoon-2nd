@@ -107,6 +107,12 @@ const SECTION_ORDER = [
   "콘티",
 ];
 
+// 사이드바/카드/검색에서 숨길 내부 자료 섹션.
+// 이미지는 계속 스캔되어 갤러리·페르소나 자동 주입에는 사용됨.
+const INTERNAL_SECTIONS = new Set([
+  "06_character_assets",
+]);
+
 const kor = (name, fallback) => LABEL[name] ?? (fallback !== undefined ? fallback : name);
 
 // ------------------------------------------------------------
@@ -208,6 +214,7 @@ const PERSONA_TO_ASSET_FOLDER = {
 function collectTree() {
   const tree = {};
   for (const section of SECTION_ORDER) {
+    if (INTERNAL_SECTIONS.has(section)) continue; // 내부 자료는 트리에서 제외
     const sdir = path.join(SRC, section);
     if (!fs.existsSync(sdir)) continue;
     const items = [];
