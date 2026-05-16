@@ -1,0 +1,12 @@
+{
+  "name": "second-web",
+  "private": true,
+  "version": "1.0.0",
+  "description": "웹툰 기획 2차 초안 정적 사이트 (송범규)",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node server.js --open",
+    "dev": "node server.js --watch --open",
+    "serve": "node server.js"
+  }
+}

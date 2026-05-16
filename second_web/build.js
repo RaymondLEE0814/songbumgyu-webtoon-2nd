@@ -1,0 +1,543 @@
+// Node.js 빌드 스크립트: second_draft 의 모든 마크다운을 단일 정적 사이트로 묶는다.
+// 외부 패키지 의존 없이 동작 (Node 16+ 권장).
+
+const fs = require("fs");
+const path = require("path");
+const vm = require("vm");
+
+const ROOT = path.resolve(__dirname, "..");
+const SRC = path.join(ROOT, "second_draft");
+const OUT = path.join(ROOT, "second_web");
+const ASSETS = path.join(OUT, "assets", "images");
+const VENDOR_MARKED = path.join(OUT, "vendor", "marked.min.js");
+
+// ---- marked 를 Node 컨텍스트에서 로드 (UMD 안전 처리) ----
+function loadMarked() {
+  if (!fs.existsSync(VENDOR_MARKED)) {
+    throw new Error(`vendor/marked.min.js 가 없습니다. 한 번만 다음 명령으로 받아두세요:\n  curl -sSL -o vendor/marked.min.js https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js`);
+  }
+  const src = fs.readFileSync(VENDOR_MARKED, "utf8");
+  // CommonJS 처럼 module.exports === exports 로 시작해서 UMD가 어디다 붙이든 캐치
+  const moduleObj = { exports: {} };
+  const sandbox = {
+    module: moduleObj,
+    exports: moduleObj.exports,
+    console,
+  };
+  sandbox.window = sandbox;
+  sandbox.globalThis = sandbox;
+  vm.createContext(sandbox);
+  vm.runInContext(src, sandbox);
+  const candidates = [
+    moduleObj.exports,
+    sandbox.exports,
+    sandbox.marked,
+    sandbox.window?.marked,
+  ];
+  for (const c of candidates) {
+    if (c && typeof c.parse === "function") return c;
+  }
+  throw new Error("marked 모듈 로드 실패: " + JSON.stringify(Object.keys(moduleObj.exports || {})));
+}
+
+const marked = loadMarked();
+marked.setOptions({ gfm: true, breaks: false });
+
+// ------------------------------------------------------------
+// 영문 폴더/파일 → 한국어 라벨 매핑
+// ------------------------------------------------------------
+const LABEL = {
+  // 섹션
+  "01_worldview": "01. 세계관",
+  "02_character_persona": "02. 캐릭터 페르소나",
+  "03_art_direction": "03. 아트 디렉션",
+  "04_story_arc": "04. 스토리 아크",
+  "05_episode_draft": "05. 에피소드 초안",
+  "06_character_assets": "06. 캐릭터 에셋",
+  "07_storyboard": "07. 스토리보드",
+  "99_review_revision_notes": "99. 검토 및 수정 노트",
+  "콘티": "콘티",
+  // 캐릭터 폴더
+  "한서윤": "한서윤",
+  "윤태하": "윤태하",
+  "박도겸": "박도겸",
+  "이름없는여자": "이름 없는 여자",
+  "한서윤의_오빠": "한서윤의 오빠",
+  "AI_차원번역기": "AI 차원번역기",
+  "_review": "검수 템플릿",
+  // 스토리보드 폴더
+  "ep01_filter_leak": "EP01 · 필터의 누출",
+  "panels": "패널",
+  "review": "검증",
+  // 파일(확장자 제외)
+  "core_concept": "핵심 세계관",
+  "supernatural_rules": "초자연 현상의 규칙",
+  "main_characters": "주요 캐릭터 페르소나",
+  "relationships": "캐릭터 관계도",
+  "panel_rhythm_guide": "컷 리듬 가이드",
+  "visual_style": "비주얼 스타일",
+  "main_plot": "메인 플롯",
+  "test_publication_strategy": "테스트 연재 전략",
+  "ep01_draft": "1화 스크립트 초안",
+  "README": "개요(README)",
+  "generation_queue": "이미지 생성 큐",
+  "character_asset_review_template": "캐릭터 에셋 검수 템플릿",
+  "prompts": "이미지 생성 프롬프트",
+  "asset_log": "에셋 작업 로그",
+  "consistency_check": "일관성 체크",
+  "ep01_storyboard": "EP01 스토리보드",
+  "panel_list": "EP01 컷 리스트",
+  "production_notes": "EP01 제작 노트",
+  "story_validation": "스토리 검증",
+  "logic_validation": "논리 검증",
+  "review_summary": "검토 요약",
+  "revision_log": "수정 내역",
+  "콘티_sample": "콘티 샘플 (55화 정령환술)",
+};
+
+const SECTION_ORDER = [
+  "01_worldview",
+  "02_character_persona",
+  "03_art_direction",
+  "04_story_arc",
+  "05_episode_draft",
+  "06_character_assets",
+  "07_storyboard",
+  "99_review_revision_notes",
+  "콘티",
+];
+
+const kor = (name, fallback) => LABEL[name] ?? (fallback !== undefined ? fallback : name);
+
+// ------------------------------------------------------------
+// 유틸
+// ------------------------------------------------------------
+function escapeHtml(s) {
+  return String(s)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function slugify(parts) {
+  return parts
+    .join("__")
+    .replace(/[^0-9A-Za-z가-힣_]+/g, "-")
+    .replace(/^[-_]+|[-_]+$/g, "") || "doc";
+}
+
+function ensureDir(p) {
+  fs.mkdirSync(p, { recursive: true });
+}
+
+function emptyDirContents(p) {
+  if (!fs.existsSync(p)) return;
+  for (const f of fs.readdirSync(p)) {
+    const fp = path.join(p, f);
+    if (fs.statSync(fp).isFile()) fs.unlinkSync(fp);
+  }
+}
+
+function walk(dir) {
+  const out = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const fp = path.join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...walk(fp));
+    else out.push(fp);
+  }
+  return out;
+}
+
+// ------------------------------------------------------------
+// 이미지 복사 + 캐릭터별 이미지 인덱스 빌드
+// ------------------------------------------------------------
+function copyImages() {
+  ensureDir(ASSETS);
+  emptyDirContents(ASSETS);
+  const map = {};
+  // 캐릭터 폴더명 → [{file, webUrl, label}]
+  const charImages = {};
+  const files = walk(SRC).filter((f) => /\.(png|jpe?g|gif|webp)$/i.test(f));
+  for (const f of files) {
+    const dest = path.join(ASSETS, path.basename(f));
+    fs.copyFileSync(f, dest);
+    const rel = path.relative(SRC, f).replaceAll("\\", "/");
+    const webUrl = `assets/images/${path.basename(f)}`;
+    map[rel] = webUrl;
+    map[path.basename(f)] = webUrl;
+
+    // 06_character_assets/{name}/images/foo.png 패턴이면 캐릭터별 인덱스에 등록
+    const parts = rel.split("/");
+    if (parts[0] === "06_character_assets" && parts[2] === "images") {
+      const charName = parts[1];
+      (charImages[charName] = charImages[charName] || []).push({
+        file: path.basename(f),
+        webUrl,
+        // 파일명에서 _v01 등을 떼고 사람이 읽을 수 있는 라벨 만들기
+        label: humanizeFilename(path.basename(f, path.extname(f))),
+      });
+    }
+  }
+  // 정렬
+  for (const k of Object.keys(charImages)) {
+    charImages[k].sort((a, b) => a.file.localeCompare(b.file));
+  }
+  return { map, charImages };
+}
+
+function humanizeFilename(stem) {
+  // ex) han_seoyun_reference_sheet_v01 → "han seoyun reference sheet v01"
+  return stem.replaceAll("_", " ").replace(/\bv(\d+)\b/g, "v$1");
+}
+
+// 02_character_persona 의 파일명 stem (한서윤, 박도겸, ...) → 06_character_assets 폴더명 매핑
+const PERSONA_TO_ASSET_FOLDER = {
+  "한서윤": "한서윤",
+  "윤태하": "윤태하",
+  "박도겸": "박도겸",
+  "이름없는여자": "이름없는여자",
+  "한서윤의_오빠": "한서윤의_오빠",
+  "AI_차원번역기": "AI_차원번역기",
+};
+
+// ------------------------------------------------------------
+// 문서 트리 수집
+// ------------------------------------------------------------
+function collectTree() {
+  const tree = {};
+  for (const section of SECTION_ORDER) {
+    const sdir = path.join(SRC, section);
+    if (!fs.existsSync(sdir)) continue;
+    const items = [];
+    // 섹션 직속 md
+    const direct = fs
+      .readdirSync(sdir, { withFileTypes: true })
+      .filter((d) => d.isFile() && d.name.endsWith(".md"))
+      .map((d) => d.name)
+      .sort();
+    for (const name of direct) {
+      const rel = path.join(section, name);
+      items.push({ kind: "file", rel, stem: name.replace(/\.md$/, "") });
+    }
+    // 하위 폴더(그룹)
+    const subs = fs
+      .readdirSync(sdir, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name)
+      .sort();
+    for (const sub of subs) {
+      const subdir = path.join(sdir, sub);
+      const groupItems = [];
+      for (const f of walk(subdir).filter((p) => p.endsWith(".md")).sort()) {
+        const rel = path.relative(SRC, f).replaceAll("\\", "/");
+        const parts = rel.split("/");
+        const stem = parts[parts.length - 1].replace(/\.md$/, "");
+        const parentChain = parts.slice(2, parts.length - 1); // section 다음부터 파일 직전까지
+        groupItems.push({ kind: "file", rel, stem, parentChain });
+      }
+      if (groupItems.length) {
+        items.push({ kind: "group", name: sub, items: groupItems });
+      }
+    }
+    if (items.length) tree[section] = items;
+  }
+  return tree;
+}
+
+// ------------------------------------------------------------
+// 문서 객체 생성
+// ------------------------------------------------------------
+function makeDoc(section, groupParts, relPath, title, imgMap, charImages) {
+  const full = path.join(SRC, relPath);
+  let text = fs.readFileSync(full, "utf8");
+  // 이미지 경로 보정 (마크다운 안에 명시된 이미지)
+  text = text.replace(/(!\[[^\]]*\])\(([^)]+)\)/g, (m, alt, url) => {
+    const fname = path.basename(url.split("?")[0]);
+    if (imgMap[fname]) return `${alt}(${imgMap[fname]})`;
+    return m;
+  });
+
+  // 자동 이미지 주입 (마커만 박아둠)
+  text = injectAutoImages(text, section, groupParts, relPath, charImages);
+
+  const breadcrumbs = [kor(section), ...groupParts.map((g) => kor(g, g)), title.split(" · ").slice(-1)[0]];
+  const html = renderMarkdownToHtml(text);
+  return { title, breadcrumbs, html };
+}
+
+// CommonMark 가 한국어 인접 **bold** / *italic* 를 처리하지 못하는 케이스를 사전 보정.
+// 코드 블록 / 인라인 코드 안은 건드리지 않는다.
+function fixCjkEmphasis(md) {
+  const segments = md.split(/(```[\s\S]*?```|`[^`\n]+`)/g);
+  return segments
+    .map((seg, i) => {
+      if (i % 2 === 1) return seg; // 코드 영역
+      // **굵게** (줄바꿈/별표 미포함)
+      seg = seg.replace(/\*\*([^*\n]+?)\*\*/g, "<strong>$1</strong>");
+      return seg;
+    })
+    .join("");
+}
+
+function renderMarkdownToHtml(text) {
+  text = fixCjkEmphasis(text);
+  let html = marked.parse(text);
+  // GALLERY 마커 치환
+  html = html.replace(/<!--GALLERY:([A-Za-z0-9+/=]+)-->/g, (m, b64) => {
+    try {
+      const { heading, payload } = JSON.parse(Buffer.from(b64, "base64").toString("utf8"));
+      return renderGalleryHtml(heading, payload);
+    } catch (_) {
+      return "";
+    }
+  });
+  // marked 가 마커를 <p>...</p> 로 감쌀 수 있어 그 케이스도 처리
+  html = html.replace(/<p>(\s*<section class="gallery-block">[\s\S]*?<\/section>\s*)<\/p>/g, "$1");
+  return html;
+}
+
+function injectAutoImages(text, section, groupParts, relPath, charImages) {
+  // 1) 02_character_persona/{한서윤}.md → 해당 캐릭터 reference 이미지 자동 노출
+  if (section === "02_character_persona" && relPath.endsWith(".md")) {
+    const stem = path.basename(relPath, ".md");
+    const charKey = PERSONA_TO_ASSET_FOLDER[stem];
+    const imgs = charKey ? charImages[charKey] : null;
+    if (imgs && imgs.length) {
+      return buildImageBlock(`참조 이미지 (캐릭터 에셋에서 자동 연결됨)`, imgs) + "\n\n---\n\n" + text;
+    }
+  }
+  // 2) 06_character_assets/{name}/README.md → 같은 폴더의 모든 이미지 갤러리
+  if (section === "06_character_assets" && groupParts.length >= 1 && relPath.endsWith("README.md")) {
+    const charKey = groupParts[0];
+    const imgs = charImages[charKey];
+    if (imgs && imgs.length) {
+      return buildImageBlock(`이미지 갤러리 (${imgs.length}컷)`, imgs) + "\n\n---\n\n" + text;
+    }
+  }
+  // 3) 06_character_assets/{name}/asset_log.md → 결과물 미리보기
+  if (section === "06_character_assets" && groupParts.length >= 1 && relPath.endsWith("asset_log.md")) {
+    const charKey = groupParts[0];
+    const imgs = charImages[charKey];
+    if (imgs && imgs.length) {
+      return buildImageBlock(`현재까지 생성된 이미지`, imgs) + "\n\n---\n\n" + text;
+    }
+  }
+  return text;
+}
+
+// 이미지 블록은 사전 렌더 단계에서 raw HTML 마커로 삽입.
+// 마크다운 본문에는 텍스트 자리표시자만 두고, 사전 렌더 후 마커를 HTML 로 치환한다.
+const GALLERY_MARKER = (heading, payload) => `\n\n<!--GALLERY:${Buffer.from(JSON.stringify({ heading, payload })).toString("base64")}-->\n\n`;
+
+function buildImageBlock(heading, imgs) {
+  return GALLERY_MARKER(heading, imgs);
+}
+
+function renderGalleryHtml(heading, imgs) {
+  const cards = imgs
+    .map(
+      (img) => `<figure class="figure">
+  <a class="figure-link" href="${img.webUrl}" target="_blank" rel="noopener">
+    <img src="${img.webUrl}" alt="${escapeAttr(img.label)}" loading="lazy">
+  </a>
+  <figcaption>${escapeHtml(img.file)}</figcaption>
+</figure>`
+    )
+    .join("\n");
+  return `<section class="gallery-block">
+<h2 class="gallery-heading">${escapeHtml(heading)}</h2>
+<div class="gallery-grid">
+${cards}
+</div>
+</section>`;
+}
+
+function escapeAttr(s) {
+  return String(s).replaceAll('"', "&quot;");
+}
+
+// ------------------------------------------------------------
+// 네비 + 문서 dict 생성
+// ------------------------------------------------------------
+function buildNavAndDocs(tree, imgMap, charImages) {
+  const docs = {};
+  const navParts = [];
+
+  // ---- 가상 섹션: 캐릭터 비주얼 갤러리 (최상단) ----
+  const gallerySlug = "00_visual_gallery__all";
+  docs[gallerySlug] = buildGalleryDoc(charImages);
+  navParts.push(
+    `<div class="nav-section"><div class="nav-section-title">비주얼 갤러리</div><ul class="nav-list">` +
+    `<li><a href="#${gallerySlug}" data-slug="${gallerySlug}">캐릭터 비주얼 한눈에 보기</a></li>` +
+    `</ul></div>`
+  );
+
+  for (const section of SECTION_ORDER) {
+    const items = tree[section];
+    if (!items) continue;
+    const secLabel = kor(section);
+    navParts.push(`<div class="nav-section"><div class="nav-section-title">${escapeHtml(secLabel)}</div><ul class="nav-list">`);
+    for (const item of items) {
+      if (item.kind === "file") {
+        const slug = slugify([section, item.stem]);
+        const title = kor(item.stem, item.stem);
+        docs[slug] = makeDoc(section, [], item.rel, title, imgMap, charImages);
+        navParts.push(`<li><a href="#${slug}" data-slug="${slug}">${escapeHtml(title)}</a></li>`);
+      } else {
+        const gname = item.name;
+        const glabel = kor(gname, gname);
+        navParts.push(`<li class="nav-group"><div class="nav-group-title">${escapeHtml(glabel)}</div><ul class="nav-sublist">`);
+        for (const sub of item.items) {
+          const slug = slugify([section, gname, ...sub.parentChain, sub.stem]);
+          const subLabel = sub.parentChain.length
+            ? sub.parentChain.map((p) => kor(p, p)).join(" · ") + " · " + kor(sub.stem, sub.stem)
+            : kor(sub.stem, sub.stem);
+          docs[slug] = makeDoc(section, [gname, ...sub.parentChain], sub.rel, `${glabel} · ${subLabel}`, imgMap, charImages);
+          navParts.push(`<li><a href="#${slug}" data-slug="${slug}">${escapeHtml(subLabel)}</a></li>`);
+        }
+        navParts.push("</ul></li>");
+      }
+    }
+    navParts.push("</ul></div>");
+  }
+  return { navHtml: navParts.join(""), docs, gallerySlug };
+}
+
+function buildGalleryDoc(charImages) {
+  const order = ["한서윤", "윤태하", "박도겸", "이름없는여자", "한서윤의_오빠", "AI_차원번역기"];
+  const known = new Set(order);
+  const sections = [...order, ...Object.keys(charImages).filter((k) => !known.has(k))];
+  let blocks = "";
+  for (const charKey of sections) {
+    const imgs = charImages[charKey];
+    if (!imgs || !imgs.length) continue;
+    blocks += renderGalleryHtml(kor(charKey, charKey), imgs);
+  }
+  if (!blocks) blocks = `<p class="muted">아직 생성된 이미지가 없습니다.</p>`;
+  const html = `<p class="lead-note">06_character_assets/{캐릭터}/images/ 폴더의 모든 결과물입니다. 이미지를 추가하고 <code>node build.js</code>만 다시 실행하면 자동으로 갱신됩니다.</p>${blocks}`;
+  return {
+    title: "캐릭터 비주얼 한눈에 보기",
+    breadcrumbs: ["비주얼 갤러리", "캐릭터 비주얼 한눈에 보기"],
+    html,
+  };
+}
+
+// ------------------------------------------------------------
+// 인덱스 카드 렌더
+// ------------------------------------------------------------
+function renderWelcomeCards(tree, gallerySlug, charImages) {
+  const cards = [];
+  // 갤러리 카드(최상단)
+  const totalImgs = Object.values(charImages).reduce((a, arr) => a + arr.length, 0);
+  cards.push(
+    `<a class="card card-accent" href="#${gallerySlug}"><div class="card-title">비주얼 갤러리</div><div class="card-meta">캐릭터 이미지 ${totalImgs}컷</div></a>`
+  );
+  for (const section of SECTION_ORDER) {
+    const items = tree[section];
+    if (!items) continue;
+    const secLabel = kor(section);
+    let firstSlug = null;
+    for (const item of items) {
+      if (item.kind === "file") {
+        firstSlug = slugify([section, item.stem]);
+        break;
+      } else {
+        if (item.items.length) {
+          const s = item.items[0];
+          firstSlug = slugify([section, item.name, ...s.parentChain, s.stem]);
+          break;
+        }
+      }
+    }
+    if (!firstSlug) continue;
+    const nDocs = items.reduce((acc, it) => acc + (it.kind === "file" ? 1 : it.items.length), 0);
+    cards.push(
+      `<a class="card" href="#${firstSlug}"><div class="card-title">${escapeHtml(secLabel)}</div><div class="card-meta">문서 ${nDocs}건</div></a>`
+    );
+  }
+  return cards.join("");
+}
+
+// ------------------------------------------------------------
+// 스크립트(임베드된 마크다운 + 메타) 렌더
+// ------------------------------------------------------------
+function renderScripts(docs) {
+  const meta = {};
+  for (const [slug, d] of Object.entries(docs)) {
+    meta[slug] = { title: d.title, breadcrumbs: d.breadcrumbs };
+  }
+  const parts = [];
+  parts.push(`<script id="docs-meta" type="application/json">${JSON.stringify(meta).replaceAll("</", "<\\/")}</script>`);
+  // 사전 렌더된 HTML을 <template>으로 임베드 (브라우저가 파싱하지 않음, JS로 활성화)
+  for (const [slug, d] of Object.entries(docs)) {
+    parts.push(`<template id="doc-${slug}">${d.html}</template>`);
+  }
+  return parts.join("\n");
+}
+
+// ------------------------------------------------------------
+// HTML 템플릿
+// ------------------------------------------------------------
+const HTML = ({ navHtml, cards, scripts }) => `<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>웹툰 기획 · 2차 초안 (송범규)</title>
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%2309090b%22/><text x=%2232%22 y=%2244%22 text-anchor=%22middle%22 font-family=%22system-ui,sans-serif%22 font-size=%2234%22 font-weight=%22700%22 fill=%22white%22>2</text></svg>'>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-kicker">webtoon planning</div>
+    <div class="brand-title">2차 초안 · 송범규</div>
+    <div class="brand-sub">인지 · 차원 · 무속 세계관</div>
+  </div>
+  <div class="search">
+    <input id="q" type="search" placeholder="문서 검색 (제목/내용)" autocomplete="off">
+  </div>
+  <nav id="nav" class="nav">${navHtml}</nav>
+  <div class="foot">© second_draft → second_web 정적 빌드</div>
+</aside>
+<main class="content">
+  <header class="topbar">
+    <button id="menuBtn" class="menu-btn" aria-label="메뉴 열기">☰</button>
+    <div id="crumb" class="crumb"><span class="cur">홈</span></div>
+  </header>
+  <article id="article" class="article">
+    <div class="welcome">
+      <h1>웹툰 기획 · 2차 초안</h1>
+      <p class="lead">왼쪽 메뉴에서 문서를 선택하세요. 모든 폴더/파일 이름은 한국어 라벨로 정리되어 있습니다.</p>
+      <div class="cards">${cards}</div>
+    </div>
+  </article>
+</main>
+
+${scripts}
+
+<script src="app.js"></script>
+</body>
+</html>
+`;
+
+// ------------------------------------------------------------
+// main
+// ------------------------------------------------------------
+function main() {
+  ensureDir(OUT);
+  const { map: imgMap, charImages } = copyImages();
+  const tree = collectTree();
+  const { navHtml, docs, gallerySlug } = buildNavAndDocs(tree, imgMap, charImages);
+  const cards = renderWelcomeCards(tree, gallerySlug, charImages);
+  const scripts = renderScripts(docs);
+  const htmlOut = HTML({ navHtml, cards, scripts });
+  fs.writeFileSync(path.join(OUT, "index.html"), htmlOut, "utf8");
+  const imgCount = new Set(Object.values(imgMap)).size;
+  console.log(`[OK] ${path.join(OUT, "index.html")}`);
+  console.log(`     docs: ${Object.keys(docs).length}, images: ${imgCount}, characters with images: ${Object.keys(charImages).length}`);
+}
+
+main();

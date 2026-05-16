@@ -1,0 +1,25 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Vercel
+.vercel/
+
+# Build outputs (Vercel가 재빌드하므로 커밋 불필요)
+/second_web/index.html
+/second_web/assets/images/
+
+# Claude / Agents 작업 캐시
+.agents/.cache/
+
+# 공개 리포 범위 밖 (작업용 원자료 / 1차 / 디자인 레퍼런스 / 에이전트 정의)
+/concept/
+/first_draft/
+/design_asset.md
+/.agents/
