@@ -80,7 +80,9 @@
 
   function currentSlug() {
     const h = location.hash || "";
-    return h.startsWith("#") ? h.slice(1) : h;
+    const raw = h.startsWith("#") ? h.slice(1) : h;
+    // 브라우저가 한글 등 비ASCII 문자를 percent-encode 한 경우 디코드
+    try { return decodeURIComponent(raw); } catch (_) { return raw; }
   }
   window.addEventListener("hashchange", () => show(currentSlug()));
   if (currentSlug()) show(currentSlug());
