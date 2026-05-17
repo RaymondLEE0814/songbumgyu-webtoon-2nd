@@ -30,4 +30,7 @@ npm-debug.log*
 **/layout_draft/dialogue_table.tsv
 **/layout_draft/generate_layout_assets.js
 
+# second_draft 자동 백업 폴더
+/second_draft_backup_*/
+
 .vercel

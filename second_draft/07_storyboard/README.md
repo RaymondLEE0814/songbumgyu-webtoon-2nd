@@ -10,5 +10,5 @@
 5. 검증 후 최종 원고/이미지 제작 단계로 넘긴다.
 
 ## 회차 폴더
+- `prologue_crosswalk_ui_leak`: 프롤로그. 횡단보도 UI 누출
 - `ep01_filter_leak`: 1화. 필터의 누출
-

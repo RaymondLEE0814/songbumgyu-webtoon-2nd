@@ -67,6 +67,7 @@ const LABEL = {
   "_review": "검수 템플릿",
   // 스토리보드 폴더
   "ep01_filter_leak": "EP01 · 필터의 누출",
+  "prologue_crosswalk_ui_leak": "프롤로그 · 횡단보도 UI 누출",
   "panels": "패널",
   "review": "검증",
   // 파일(확장자 제외)
@@ -86,8 +87,10 @@ const LABEL = {
   "asset_log": "에셋 작업 로그",
   "consistency_check": "일관성 체크",
   "ep01_storyboard": "EP01 스토리보드",
-  "panel_list": "EP01 컷 리스트",
-  "production_notes": "EP01 제작 노트",
+  "prologue_storyboard": "프롤로그 스토리보드",
+  "prologue_draft": "프롤로그 스크립트 초안",
+  "panel_list": "컷 리스트",
+  "production_notes": "제작 노트",
   "story_validation": "스토리 검증",
   "logic_validation": "논리 검증",
   "review_summary": "검토 요약",
@@ -285,7 +288,17 @@ function collectTree() {
       const groupItems = [];
       const subFiles = walk(subdir)
         .filter((p) => p.endsWith(".md") && path.basename(p) !== "README.md")
-        .sort();
+        .sort((a, b) => {
+          // *_storyboard.md 를 그룹 최상단으로, review/* 를 가장 뒤로
+          const ax = path.basename(a), bx = path.basename(b);
+          const aSb = ax.endsWith("_storyboard.md") ? 0 : 1;
+          const bSb = bx.endsWith("_storyboard.md") ? 0 : 1;
+          if (aSb !== bSb) return aSb - bSb;
+          const aRev = a.includes("/review/") || a.includes("\\review\\") ? 1 : 0;
+          const bRev = b.includes("/review/") || b.includes("\\review\\") ? 1 : 0;
+          if (aRev !== bRev) return aRev - bRev;
+          return a.localeCompare(b);
+        });
       for (const f of subFiles) {
         const rel = path.relative(SRC, f).replaceAll("\\", "/");
         const parts = rel.split("/");
