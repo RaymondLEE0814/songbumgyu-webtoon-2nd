@@ -6,5 +6,5 @@
 window.SITE_CONFIG = {
   SUPABASE_URL: "https://asdzuprhcovxifolvaxa.supabase.co",
   SUPABASE_ANON_KEY: "sb_publishable_mLMfg8ept4RmsOo2uzW5vg_rYYjgaC1",
-  GATE_PASSWORD: "송범규웹툰",
+  GATE_PASSWORD: "1234",
 };
