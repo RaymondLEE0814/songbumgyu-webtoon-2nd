@@ -165,7 +165,10 @@ function copyImages() {
   const map = {};
   // 캐릭터 폴더명 → [{file, webUrl, label}]
   const charImages = {};
-  const files = walk(SRC).filter((f) => /\.(png|jpe?g|gif|webp)$/i.test(f));
+  // 에피소드명 → { fullScroll: webUrl | null, panels: [{file, webUrl, label}] }
+  const storyboardPanels = {};
+
+  const files = walk(SRC).filter((f) => /\.(svg|png|jpe?g|gif|webp)$/i.test(f));
   for (const f of files) {
     const dest = path.join(ASSETS, path.basename(f));
     fs.copyFileSync(f, dest);
@@ -174,23 +177,40 @@ function copyImages() {
     map[rel] = webUrl;
     map[path.basename(f)] = webUrl;
 
-    // 06_character_assets/{name}/images/foo.png 패턴이면 캐릭터별 인덱스에 등록
     const parts = rel.split("/");
+
+    // 06_character_assets/{name}/images/foo.png → 캐릭터별 인덱스
     if (parts[0] === "06_character_assets" && parts[2] === "images") {
       const charName = parts[1];
       (charImages[charName] = charImages[charName] || []).push({
         file: path.basename(f),
         webUrl,
-        // 파일명에서 _v01 등을 떼고 사람이 읽을 수 있는 라벨 만들기
         label: humanizeFilename(path.basename(f, path.extname(f))),
       });
     }
+
+    // 07_storyboard/{episode}/layout_draft/(full_scroll_layout.svg | images/*.svg) → 에피소드별 인덱스
+    if (parts[0] === "07_storyboard" && parts[2] === "layout_draft") {
+      const ep = parts[1];
+      storyboardPanels[ep] = storyboardPanels[ep] || { fullScroll: null, panels: [] };
+      if (parts[3] === "full_scroll_layout.svg") {
+        storyboardPanels[ep].fullScroll = webUrl;
+      } else if (parts[3] === "images" && parts[4]) {
+        storyboardPanels[ep].panels.push({
+          file: path.basename(f),
+          webUrl,
+          label: humanizeFilename(path.basename(f, path.extname(f))),
+        });
+      }
+    }
   }
-  // 정렬
   for (const k of Object.keys(charImages)) {
     charImages[k].sort((a, b) => a.file.localeCompare(b.file));
   }
-  return { map, charImages };
+  for (const k of Object.keys(storyboardPanels)) {
+    storyboardPanels[k].panels.sort((a, b) => a.file.localeCompare(b.file));
+  }
+  return { map, charImages, storyboardPanels };
 }
 
 function humanizeFilename(stem) {
@@ -206,6 +226,32 @@ const PERSONA_TO_ASSET_FOLDER = {
   "이름없는여자": "이름없는여자",
   "한서윤의_오빠": "한서윤의_오빠",
   "AI_차원번역기": "AI_차원번역기",
+};
+
+// 에피소드별 컷 순서 (panel_list.md 기준, 블랙 여백 포함)
+const STORYBOARD_SEQUENCES = {
+  ep01_filter_leak: [
+    { file: "panel_01.svg", caption: "컷 01 · 800px · 정박 · 늦은 밤 지하철, 서윤 전신", sfx: "덜컹... 덜컹..." },
+    { file: "panel_02.svg", caption: "컷 02 · 800px · 정박 · 맞은편 승객의 발끝", sfx: "" },
+    { file: "panel_03.svg", caption: "컷 03 · 800px · 정박 · 폐역 CCTV 제보 사진", sfx: "“귀신이면 움직여야지.”" },
+    { file: "panel_04.svg", caption: "컷 04 · 800px · 정박 · 눈 감았다 뜨는 서윤", sfx: "덜컹... 덜컹..." },
+    { file: "panel_05.svg", caption: "컷 05 · 200px · 엇박 · 형광등 깜빡임", sfx: "" },
+    { file: "black_01.svg", caption: "여백 · 1500px · 정지 · 블랙 여백 (호흡 정지)", sfx: "", isBlack: true },
+    { file: "panel_06.svg", caption: "컷 06 · 2500px · 누출 · 노이즈 승객 거대 컷", sfx: "삐----" },
+    { file: "panel_07.svg", caption: "컷 07 · 500px · 폴리리듬 · 서윤 눈 클로즈업", sfx: "" },
+    { file: "panel_08.svg", caption: "컷 08 · 600px · 폴리리듬 · 노이즈 내부 단서", sfx: "“도...착...”" },
+    { file: "panel_09.svg", caption: "컷 09 · 700px · 폴리리듬 · 터널이 정보 구조로 변함", sfx: "“2:17”" },
+    { file: "panel_10.svg", caption: "컷 10 · 300px · 엇박 · 손목 픽셀 무늬", sfx: "“아니야. 오늘은 아니야.”" },
+    { file: "panel_11.svg", caption: "컷 11 · 800px · 정박 복귀 · 문 열림, 정상 안내방송", sfx: "“이번 역은...”" },
+    { file: "black_02.svg", caption: "여백 · 500px · 정지 · 블랙 여백 (안심 직전의 숨)", sfx: "", isBlack: true },
+    { file: "panel_12.svg", caption: "컷 12 · 1000px · 불안정 정박 · 바닥의 픽셀 가루", sfx: "“...또 샜어.”" },
+    { file: "panel_13.svg", caption: "컷 13 · 800px · 단서 · 승차권 조각으로 변함", sfx: "“1999 / 02:17”" },
+    { file: "panel_14.svg", caption: "컷 14 · 600px · 훅 · 박도겸 문자", sfx: "“내일 오지 마십시오. 그 시간에 보면, 그쪽도 기록됩니다.”" },
+  ],
+};
+
+const EPISODE_LABEL = {
+  ep01_filter_leak: "EP01 · 필터의 누출",
 };
 
 // ------------------------------------------------------------
@@ -364,6 +410,51 @@ ${cards}
 </section>`;
 }
 
+function buildStoryboardPanelDoc(epKey, panelsData) {
+  const seq = STORYBOARD_SEQUENCES[epKey];
+  const epLabel = EPISODE_LABEL[epKey] || epKey;
+  if (!seq || !panelsData || !panelsData.panels.length) return null;
+
+  const byFile = Object.fromEntries(panelsData.panels.map((p) => [p.file, p]));
+
+  let strip = '<div class="panel-strip">';
+  for (const item of seq) {
+    const info = byFile[item.file];
+    if (!info) continue;
+    const cls = item.isBlack ? "panel panel-black" : "panel";
+    strip += `
+<figure class="${cls}">
+  <a class="panel-link" href="${info.webUrl}" target="_blank" rel="noopener">
+    <img src="${info.webUrl}" alt="${escapeAttr(item.caption)}" loading="lazy">
+  </a>
+  <figcaption>
+    <span class="panel-caption-main">${escapeHtml(item.caption)}</span>${item.sfx ? `<span class="panel-caption-sfx">${escapeHtml(item.sfx)}</span>` : ""}
+  </figcaption>
+</figure>`;
+  }
+  strip += "\n</div>";
+
+  const fullScrollBlock = panelsData.fullScroll
+    ? `<details class="full-scroll-toggle">
+  <summary>전체 스크롤 한 장으로 보기 (full_scroll_layout.svg · 720 × 13,200px)</summary>
+  <div class="full-scroll-wrap">
+    <img src="${panelsData.fullScroll}" alt="${escapeAttr(epLabel)} 풀 스크롤 레이아웃" loading="lazy">
+  </div>
+</details>`
+    : "";
+
+  const html = `<p class="lead-note">${escapeHtml(epLabel)} 의 러프 스크롤 레이아웃입니다. 컷 폭 720px, 본 컷 14개 + 블랙 여백 2구간, 총 세로 13,200px. 작화 전 컷 길이·리듬·대사 위치를 잡기 위한 SVG 초안이며 최종 작화 파일이 아닙니다.</p>
+${fullScrollBlock}
+<h2 class="gallery-heading">패널 시퀀스 (스크롤 순서)</h2>
+${strip}`;
+
+  return {
+    title: `${epLabel} · 패널 시퀀스`,
+    breadcrumbs: ["07. 스토리보드", epLabel, "패널 시퀀스"],
+    html,
+  };
+}
+
 function escapeAttr(s) {
   return String(s).replaceAll('"', "&quot;");
 }
@@ -371,7 +462,7 @@ function escapeAttr(s) {
 // ------------------------------------------------------------
 // 네비 + 문서 dict 생성
 // ------------------------------------------------------------
-function buildNavAndDocs(tree, imgMap, charImages) {
+function buildNavAndDocs(tree, imgMap, charImages, storyboardPanels) {
   const docs = {};
   const navParts = [];
 
@@ -383,6 +474,16 @@ function buildNavAndDocs(tree, imgMap, charImages) {
     `<li><a href="#${gallerySlug}" data-slug="${gallerySlug}">캐릭터 비주얼 한눈에 보기</a></li>` +
     `</ul></div>`
   );
+
+  // 에피소드별 패널 시퀀스 슬러그 (sub 항목 렌더링 시 그룹에 끼워넣기 위해 미리 빌드)
+  const panelDocsByEp = {};
+  for (const epKey of Object.keys(storyboardPanels || {})) {
+    const doc = buildStoryboardPanelDoc(epKey, storyboardPanels[epKey]);
+    if (!doc) continue;
+    const slug = slugify(["07_storyboard", epKey, "panel_sequence"]);
+    docs[slug] = doc;
+    panelDocsByEp[epKey] = { slug, label: "패널 시퀀스 (러프 스크롤)" };
+  }
 
   for (const section of SECTION_ORDER) {
     const items = tree[section];
@@ -399,6 +500,11 @@ function buildNavAndDocs(tree, imgMap, charImages) {
         const gname = item.name;
         const glabel = kor(gname, gname);
         navParts.push(`<li class="nav-group"><div class="nav-group-title">${escapeHtml(glabel)}</div><ul class="nav-sublist">`);
+        // 07_storyboard 그룹이면 패널 시퀀스를 최상단에 끼워넣기
+        if (section === "07_storyboard" && panelDocsByEp[gname]) {
+          const p = panelDocsByEp[gname];
+          navParts.push(`<li><a href="#${p.slug}" data-slug="${p.slug}">${escapeHtml(p.label)}</a></li>`);
+        }
         for (const sub of item.items) {
           const slug = slugify([section, gname, ...sub.parentChain, sub.stem]);
           const subLabel = sub.parentChain.length
@@ -412,7 +518,7 @@ function buildNavAndDocs(tree, imgMap, charImages) {
     }
     navParts.push("</ul></div>");
   }
-  return { navHtml: navParts.join(""), docs, gallerySlug };
+  return { navHtml: navParts.join(""), docs, gallerySlug, panelDocsByEp };
 }
 
 function buildGalleryDoc(charImages) {
@@ -437,13 +543,19 @@ function buildGalleryDoc(charImages) {
 // ------------------------------------------------------------
 // 인덱스 카드 렌더
 // ------------------------------------------------------------
-function renderWelcomeCards(tree, gallerySlug, charImages) {
+function renderWelcomeCards(tree, gallerySlug, charImages, panelDocsByEp) {
   const cards = [];
   // 갤러리 카드(최상단)
   const totalImgs = Object.values(charImages).reduce((a, arr) => a + arr.length, 0);
   cards.push(
     `<a class="card card-accent" href="#${gallerySlug}"><div class="card-title">비주얼 갤러리</div><div class="card-meta">캐릭터 이미지 ${totalImgs}컷</div></a>`
   );
+  // EP01 패널 시퀀스 카드 (있으면 두 번째)
+  if (panelDocsByEp && panelDocsByEp.ep01_filter_leak) {
+    cards.push(
+      `<a class="card card-accent" href="#${panelDocsByEp.ep01_filter_leak.slug}"><div class="card-title">EP01 패널 시퀀스</div><div class="card-meta">러프 스크롤 16컷</div></a>`
+    );
+  }
   for (const section of SECTION_ORDER) {
     const items = tree[section];
     if (!items) continue;
@@ -538,16 +650,18 @@ ${scripts}
 // ------------------------------------------------------------
 function main() {
   ensureDir(OUT);
-  const { map: imgMap, charImages } = copyImages();
+  const { map: imgMap, charImages, storyboardPanels } = copyImages();
   const tree = collectTree();
-  const { navHtml, docs, gallerySlug } = buildNavAndDocs(tree, imgMap, charImages);
-  const cards = renderWelcomeCards(tree, gallerySlug, charImages);
+  const { navHtml, docs, gallerySlug, panelDocsByEp } = buildNavAndDocs(tree, imgMap, charImages, storyboardPanels);
+  const cards = renderWelcomeCards(tree, gallerySlug, charImages, panelDocsByEp);
   const scripts = renderScripts(docs);
   const htmlOut = HTML({ navHtml, cards, scripts });
   fs.writeFileSync(path.join(OUT, "index.html"), htmlOut, "utf8");
   const imgCount = new Set(Object.values(imgMap)).size;
+  const epCount = Object.keys(storyboardPanels).length;
+  const panelCount = Object.values(storyboardPanels).reduce((a, e) => a + e.panels.length, 0);
   console.log(`[OK] ${path.join(OUT, "index.html")}`);
-  console.log(`     docs: ${Object.keys(docs).length}, images: ${imgCount}, characters with images: ${Object.keys(charImages).length}`);
+  console.log(`     docs: ${Object.keys(docs).length}, images: ${imgCount}, characters: ${Object.keys(charImages).length}, episodes: ${epCount} (${panelCount} panels)`);
 }
 
 main();

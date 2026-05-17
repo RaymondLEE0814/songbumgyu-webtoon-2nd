@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="800" viewBox="0 0 720 800">
+  <title>EP01 13 승차권 조각으로 변함</title>
+  <rect width="720" height="800" fill="#fff"/><rect x="10" y="10" width="700" height="780" fill="none" stroke="#111" stroke-width="4"/>
+  <g opacity="0.92">
+    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
+    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 13</text>
+    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">단서 / 800px</text>
+  </g><rect x="165" y="215" width="390" height="210" fill="#fff" stroke="#111" stroke-width="5" transform="rotate(-8 360 320)"/>
+<text x="252" y="305" font-size="48" font-family="Arial, sans-serif" transform="rotate(-8 360 320)">1999</text><text x="350" y="370" font-size="42" font-family="Arial, sans-serif" transform="rotate(-8 360 320)">02:17</text>
+<path d="M125 530 C260 450 360 520 470 460" fill="none" stroke="#111" stroke-width="18" stroke-linecap="round"/>
+
+  <g>
+    <rect x="70" y="610" width="410" height="124" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
+    <text x="275" y="644" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">1999</text>
+<text x="275" y="676" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">/</text>
+<text x="275" y="708" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">02:17</text>
+  </g><text x="360" y="758" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">승차권</text>
+<text x="360" y="786" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">조각으로</text>
+<text x="360" y="814" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">변함</text>
+</svg>

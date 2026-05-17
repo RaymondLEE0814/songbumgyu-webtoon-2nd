@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="600" viewBox="0 0 720 600">
+  <title>EP01 14 박도겸 문자</title>
+  <rect width="720" height="600" fill="#fff"/><rect x="10" y="10" width="700" height="580" fill="none" stroke="#111" stroke-width="4"/>
+  <g opacity="0.92">
+    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
+    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 14</text>
+    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">훅 / 600px</text>
+  </g><rect x="190" y="85" width="340" height="470" rx="38" fill="#fff" stroke="#111" stroke-width="7"/><rect x="220" y="150" width="280" height="330" fill="#f7f7f7" stroke="#111" stroke-width="3"/>
+<rect x="245" y="210" width="230" height="160" rx="16" fill="#fff" stroke="#111" stroke-width="3"/>
+<text x="360" y="250" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">내일</text>
+<text x="360" y="279" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">오지</text>
+<text x="360" y="308" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">마십시오.</text>
+<text x="360" y="337" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif"></text>
+<text x="360" y="366" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">그</text>
+<text x="360" y="395" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">시간에</text>
+<text x="360" y="424" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">보면,</text>
+<text x="360" y="453" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">그쪽도</text>
+<text x="360" y="482" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">기록됩니다.</text>
+<line x1="330" y1="392" x2="455" y2="392" stroke="#111" stroke-width="4" stroke-dasharray="8 5"/><text x="360" y="558" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">박도겸</text>
+<text x="360" y="586" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">문자</text>
+</svg>

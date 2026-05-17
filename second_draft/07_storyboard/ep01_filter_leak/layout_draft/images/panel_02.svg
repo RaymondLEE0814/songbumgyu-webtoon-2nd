@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="800" viewBox="0 0 720 800">
+  <title>EP01 02 맞은편 승객의 발끝</title>
+  <rect width="720" height="800" fill="#fff"/><rect x="10" y="10" width="700" height="780" fill="none" stroke="#111" stroke-width="4"/>
+  <g opacity="0.92">
+    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
+    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 02</text>
+    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">정박 / 800px</text>
+  </g><rect x="40" y="105" width="640" height="620" fill="#f7f7f7" stroke="#111" stroke-width="4"/>
+<line x1="70" y1="170" x2="650" y2="170" stroke="#aaa" stroke-width="2"/>
+<line x1="70" y1="235" x2="650" y2="235" stroke="#aaa" stroke-width="2"/>
+<line x1="70" y1="300" x2="650" y2="300" stroke="#aaa" stroke-width="2"/>
+<line x1="70" y1="365" x2="650" y2="365" stroke="#aaa" stroke-width="2"/>
+<line x1="70" y1="430" x2="650" y2="430" stroke="#aaa" stroke-width="2"/>
+<line x1="70" y1="495" x2="650" y2="495" stroke="#aaa" stroke-width="2"/>
+<line x1="70" y1="560" x2="650" y2="560" stroke="#aaa" stroke-width="2"/>
+<line x1="70" y1="625" x2="650" y2="625" stroke="#aaa" stroke-width="2"/>
+<path d="M265 430 q45 -30 92 0 l-18 50 h-78 z" fill="#fff" stroke="#111" stroke-width="5"/><path d="M390 430 q45 -30 92 0 l-18 50 h-78 z" fill="#fff" stroke="#111" stroke-width="5"/><text x="360" y="758" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">맞은편</text>
+<text x="360" y="786" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">승객의</text>
+<text x="360" y="814" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">발끝</text>
+</svg>

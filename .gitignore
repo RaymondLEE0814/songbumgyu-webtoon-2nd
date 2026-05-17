@@ -23,3 +23,11 @@ npm-debug.log*
 /first_draft/
 /design_asset.md
 /.agents/
+
+# 스토리보드 layout 작업용 (내부 도구/메모, SVG 만 공개)
+**/layout_draft/README.md
+**/layout_draft/layout_board.html
+**/layout_draft/dialogue_table.tsv
+**/layout_draft/generate_layout_assets.js
+
+.vercel
