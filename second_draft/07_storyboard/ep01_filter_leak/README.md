@@ -23,7 +23,8 @@
 - EP01 상세 스토리보드 업데이트 완료.
 - 제작용 컷 리스트 업데이트 완료.
 - 제작 노트 및 검증 문서 업데이트 완료.
-- `layout_draft`의 기존 SVG/HTML 러프는 이전 14컷 지하철 버전이므로 새 22컷 기준으로 재생성이 필요함.
+- 기존 14컷 `layout_draft`는 `layout_draft_backup_20260517_before_22cut_update`로 백업 완료.
+- 새 22컷 기준 `layout_draft` SVG/HTML/TSV 생성 완료.
 
 ## 결과물
 - `ep01_storyboard.md`: 장면별 스토리보드.
@@ -31,4 +32,5 @@
 - `production_notes.md`: 작화/연출/에셋 사용 지침.
 - `review/story_validation.md`: story_검증 역할 기준 검토.
 - `review/logic_validation.md`: 회차별_논리_검증 기준 검토.
-- `layout_draft/`: 구버전 14컷 레이아웃 초안. 현재 스토리보드와 불일치.
+- `layout_draft/`: 새 22컷 레이아웃 초안.
+- `layout_draft_backup_20260517_before_22cut_update/`: 이전 14컷 레이아웃 백업.

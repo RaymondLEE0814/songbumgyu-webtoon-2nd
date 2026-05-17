@@ -1,539 +1,118 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="13200" viewBox="0 0 720 13200">
-  <title>EP01 full scroll layout draft</title>
-  <g transform="translate(0 0)"><rect width="720" height="800" fill="#fff"/><rect x="10" y="10" width="700" height="780" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 01</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">정박 / 800px</text>
-  </g>
-  <rect x="42" y="120" width="636" height="590" fill="#f8f8f8" stroke="#111" stroke-width="4"/>
-  <line x1="42" y1="210" x2="678" y2="210" stroke="#111" stroke-width="3"/>
-  <line x1="42" y1="630" x2="678" y2="630" stroke="#111" stroke-width="3"/>
-  <rect x="116" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <rect x="246" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <rect x="376" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <rect x="506" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <line x1="360" y1="120" x2="360" y2="630" stroke="#111" stroke-width="2" opacity="0.4"/>
-
-  <g transform="translate(210 470) scale(1.15)" stroke="#111" stroke-width="4" fill="none">
-    <circle cx="0" cy="-90" r="36" fill="#fff"/>
-    <path d="M-22 -125 Q0 -155 25 -122" />
-    <line x1="0" y1="-54" x2="-10" y2="70"/>
-    <line x1="-10" y1="-10" x2="-62" y2="34"/>
-    <line x1="-6" y1="-2" x2="42" y2="30"/>
-    <line x1="-10" y1="70" x2="-48" y2="160"/>
-    <line x1="-10" y1="70" x2="28" y2="160"/>
-    <rect x="46" y="4" width="52" height="72" fill="#fff"/>
-  </g>
-<path d="M205 170 L205 315" stroke="#111" stroke-width="5"/><circle cx="205" cy="340" r="18" fill="#fff" stroke="#111" stroke-width="4"/>
-<text x="580" y="118" font-size="28" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">덜컹... 덜컹...</text><text x="360" y="758" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">늦은</text>
-<text x="360" y="786" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">밤</text>
-<text x="360" y="814" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">지하철,</text>
-<text x="360" y="842" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">서윤</text>
-<text x="360" y="870" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">전신</text></g>
-<g transform="translate(0 800)"><rect width="720" height="800" fill="#fff"/><rect x="10" y="10" width="700" height="780" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 02</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">정박 / 800px</text>
-  </g><rect x="40" y="105" width="640" height="620" fill="#f7f7f7" stroke="#111" stroke-width="4"/>
-<line x1="70" y1="170" x2="650" y2="170" stroke="#aaa" stroke-width="2"/>
-<line x1="70" y1="235" x2="650" y2="235" stroke="#aaa" stroke-width="2"/>
-<line x1="70" y1="300" x2="650" y2="300" stroke="#aaa" stroke-width="2"/>
-<line x1="70" y1="365" x2="650" y2="365" stroke="#aaa" stroke-width="2"/>
-<line x1="70" y1="430" x2="650" y2="430" stroke="#aaa" stroke-width="2"/>
-<line x1="70" y1="495" x2="650" y2="495" stroke="#aaa" stroke-width="2"/>
-<line x1="70" y1="560" x2="650" y2="560" stroke="#aaa" stroke-width="2"/>
-<line x1="70" y1="625" x2="650" y2="625" stroke="#aaa" stroke-width="2"/>
-<path d="M265 430 q45 -30 92 0 l-18 50 h-78 z" fill="#fff" stroke="#111" stroke-width="5"/><path d="M390 430 q45 -30 92 0 l-18 50 h-78 z" fill="#fff" stroke="#111" stroke-width="5"/><text x="360" y="758" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">맞은편</text>
-<text x="360" y="786" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">승객의</text>
-<text x="360" y="814" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">발끝</text></g>
-<g transform="translate(0 1600)"><rect width="720" height="800" fill="#fff"/><rect x="10" y="10" width="700" height="780" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 03</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">정박 / 800px</text>
-  </g><rect x="92" y="180" width="536" height="360" fill="#f7f7f7" stroke="#111" stroke-width="5" transform="rotate(-4 360 360)"/>
-<rect x="194" y="245" width="332" height="210" fill="#ddd" stroke="#111" stroke-width="3"/><line x1="194" y1="370" x2="526" y2="370" stroke="#111" stroke-width="2"/><path d="M360 315 l-22 82 h44 z" fill="#111"/>
-<path d="M100 505 C180 430 240 470 300 540" fill="none" stroke="#111" stroke-width="15" stroke-linecap="round"/>
-
-  <g>
-    <rect x="70" y="610" width="410" height="92" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
-    <text x="275" y="644" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">귀신이면</text>
-<text x="275" y="676" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">움직여야지.</text>
-  </g><text x="360" y="758" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">폐역</text>
-<text x="360" y="786" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">CCTV</text>
-<text x="360" y="814" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">제보</text>
-<text x="360" y="842" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">사진</text></g>
-<g transform="translate(0 2400)"><rect width="720" height="800" fill="#fff"/><rect x="10" y="10" width="700" height="780" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 04</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">정박 / 800px</text>
-  </g>
-  <rect x="42" y="120" width="636" height="590" fill="#f8f8f8" stroke="#111" stroke-width="4"/>
-  <line x1="42" y1="210" x2="678" y2="210" stroke="#111" stroke-width="3"/>
-  <line x1="42" y1="630" x2="678" y2="630" stroke="#111" stroke-width="3"/>
-  <rect x="116" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <rect x="246" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <rect x="376" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <rect x="506" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <line x1="360" y1="120" x2="360" y2="630" stroke="#111" stroke-width="2" opacity="0.4"/>
-
-  <g transform="translate(360 485) scale(1.35)" stroke="#111" stroke-width="4" fill="none">
-    <circle cx="0" cy="-90" r="36" fill="#fff"/>
-    <path d="M-22 -125 Q0 -155 25 -122" />
-    <line x1="0" y1="-54" x2="-10" y2="70"/>
-    <line x1="-10" y1="-10" x2="-62" y2="34"/>
-    <line x1="-6" y1="-2" x2="42" y2="30"/>
-    <line x1="-10" y1="70" x2="-48" y2="160"/>
-    <line x1="-10" y1="70" x2="28" y2="160"/>
-    <rect x="46" y="4" width="52" height="72" fill="#fff"/>
-  </g>
-<path d="M280 270 C350 245 430 270 470 340" fill="none" stroke="#111" stroke-width="5"/><circle cx="325" cy="310" r="6"/><circle cx="405" cy="310" r="6"/>
-<text x="580" y="118" font-size="28" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">덜컹... 덜컹...</text><text x="360" y="758" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">눈</text>
-<text x="360" y="786" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">감았다</text>
-<text x="360" y="814" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">뜨는</text>
-<text x="360" y="842" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">서윤</text></g>
-<g transform="translate(0 3200)"><rect width="720" height="200" fill="#fff"/><rect x="10" y="10" width="700" height="180" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 05</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">엇박 / 200px</text>
-  </g><rect x="60" y="70" width="600" height="54" fill="#eee" stroke="#111" stroke-width="4"/>
-<circle cx="20" cy="35" r="1" fill="#111" opacity="0.25"/>
-<circle cx="57" cy="58" r="2" fill="#111" opacity="0.25"/>
-<circle cx="94" cy="81" r="3" fill="#111" opacity="0.25"/>
-<circle cx="131" cy="104" r="1" fill="#111" opacity="0.25"/>
-<circle cx="168" cy="127" r="2" fill="#111" opacity="0.25"/>
-<circle cx="205" cy="150" r="3" fill="#111" opacity="0.25"/>
-<circle cx="242" cy="173" r="1" fill="#111" opacity="0.25"/>
-<circle cx="279" cy="51" r="2" fill="#111" opacity="0.25"/>
-<circle cx="316" cy="74" r="3" fill="#111" opacity="0.25"/>
-<circle cx="353" cy="97" r="1" fill="#111" opacity="0.25"/>
-<circle cx="390" cy="120" r="2" fill="#111" opacity="0.25"/>
-<circle cx="427" cy="143" r="3" fill="#111" opacity="0.25"/>
-<circle cx="464" cy="166" r="1" fill="#111" opacity="0.25"/>
-<circle cx="501" cy="44" r="2" fill="#111" opacity="0.25"/>
-<circle cx="538" cy="67" r="3" fill="#111" opacity="0.25"/>
-<circle cx="575" cy="90" r="1" fill="#111" opacity="0.25"/>
-<circle cx="612" cy="113" r="2" fill="#111" opacity="0.25"/>
-<circle cx="649" cy="136" r="3" fill="#111" opacity="0.25"/>
-<circle cx="686" cy="159" r="1" fill="#111" opacity="0.25"/>
-<circle cx="43" cy="37" r="2" fill="#111" opacity="0.25"/>
-<circle cx="80" cy="60" r="3" fill="#111" opacity="0.25"/>
-<circle cx="117" cy="83" r="1" fill="#111" opacity="0.25"/>
-<circle cx="154" cy="106" r="2" fill="#111" opacity="0.25"/>
-<circle cx="191" cy="129" r="3" fill="#111" opacity="0.25"/>
-<circle cx="228" cy="152" r="1" fill="#111" opacity="0.25"/>
-<circle cx="265" cy="175" r="2" fill="#111" opacity="0.25"/>
-<circle cx="302" cy="53" r="3" fill="#111" opacity="0.25"/>
-<circle cx="339" cy="76" r="1" fill="#111" opacity="0.25"/>
-<circle cx="376" cy="99" r="2" fill="#111" opacity="0.25"/>
-<circle cx="413" cy="122" r="3" fill="#111" opacity="0.25"/>
-<circle cx="450" cy="145" r="1" fill="#111" opacity="0.25"/>
-<circle cx="487" cy="168" r="2" fill="#111" opacity="0.25"/>
-<circle cx="524" cy="46" r="3" fill="#111" opacity="0.25"/>
-<circle cx="561" cy="69" r="1" fill="#111" opacity="0.25"/>
-<circle cx="598" cy="92" r="2" fill="#111" opacity="0.25"/>
-<circle cx="635" cy="115" r="3" fill="#111" opacity="0.25"/>
-<circle cx="672" cy="138" r="1" fill="#111" opacity="0.25"/>
-<circle cx="29" cy="161" r="2" fill="#111" opacity="0.25"/>
-<circle cx="66" cy="39" r="3" fill="#111" opacity="0.25"/>
-<circle cx="103" cy="62" r="1" fill="#111" opacity="0.25"/>
-<circle cx="140" cy="85" r="2" fill="#111" opacity="0.25"/>
-<circle cx="177" cy="108" r="3" fill="#111" opacity="0.25"/>
-<circle cx="214" cy="131" r="1" fill="#111" opacity="0.25"/>
-<circle cx="251" cy="154" r="2" fill="#111" opacity="0.25"/>
-<circle cx="288" cy="177" r="3" fill="#111" opacity="0.25"/>
-<circle cx="325" cy="55" r="1" fill="#111" opacity="0.25"/>
-<circle cx="362" cy="78" r="2" fill="#111" opacity="0.25"/>
-<circle cx="399" cy="101" r="3" fill="#111" opacity="0.25"/>
-<circle cx="436" cy="124" r="1" fill="#111" opacity="0.25"/>
-<circle cx="473" cy="147" r="2" fill="#111" opacity="0.25"/>
-<circle cx="510" cy="170" r="3" fill="#111" opacity="0.25"/>
-<circle cx="547" cy="48" r="1" fill="#111" opacity="0.25"/>
-<circle cx="584" cy="71" r="2" fill="#111" opacity="0.25"/>
-<circle cx="621" cy="94" r="3" fill="#111" opacity="0.25"/>
-<circle cx="658" cy="117" r="1" fill="#111" opacity="0.25"/>
-<circle cx="695" cy="140" r="2" fill="#111" opacity="0.25"/>
-<circle cx="52" cy="163" r="3" fill="#111" opacity="0.25"/>
-<circle cx="89" cy="41" r="1" fill="#111" opacity="0.25"/>
-<circle cx="126" cy="64" r="2" fill="#111" opacity="0.25"/>
-<circle cx="163" cy="87" r="3" fill="#111" opacity="0.25"/>
-<circle cx="200" cy="110" r="1" fill="#111" opacity="0.25"/>
-<circle cx="237" cy="133" r="2" fill="#111" opacity="0.25"/>
-<circle cx="274" cy="156" r="3" fill="#111" opacity="0.25"/>
-<circle cx="311" cy="179" r="1" fill="#111" opacity="0.25"/>
-<circle cx="348" cy="57" r="2" fill="#111" opacity="0.25"/>
-<circle cx="385" cy="80" r="3" fill="#111" opacity="0.25"/>
-<circle cx="422" cy="103" r="1" fill="#111" opacity="0.25"/>
-<circle cx="459" cy="126" r="2" fill="#111" opacity="0.25"/>
-<circle cx="496" cy="149" r="3" fill="#111" opacity="0.25"/>
-<circle cx="533" cy="172" r="1" fill="#111" opacity="0.25"/>
-<circle cx="570" cy="50" r="2" fill="#111" opacity="0.25"/>
-<circle cx="607" cy="73" r="3" fill="#111" opacity="0.25"/>
-<circle cx="644" cy="96" r="1" fill="#111" opacity="0.25"/>
-<circle cx="681" cy="119" r="2" fill="#111" opacity="0.25"/>
-<circle cx="38" cy="142" r="3" fill="#111" opacity="0.25"/>
-<circle cx="75" cy="165" r="1" fill="#111" opacity="0.25"/>
-<circle cx="112" cy="43" r="2" fill="#111" opacity="0.25"/>
-<circle cx="149" cy="66" r="3" fill="#111" opacity="0.25"/>
-<circle cx="186" cy="89" r="1" fill="#111" opacity="0.25"/>
-<circle cx="223" cy="112" r="2" fill="#111" opacity="0.25"/>
-<circle cx="260" cy="135" r="3" fill="#111" opacity="0.25"/>
-<circle cx="297" cy="158" r="1" fill="#111" opacity="0.25"/>
-<circle cx="334" cy="36" r="2" fill="#111" opacity="0.25"/>
-<circle cx="371" cy="59" r="3" fill="#111" opacity="0.25"/>
-<circle cx="408" cy="82" r="1" fill="#111" opacity="0.25"/>
-<circle cx="445" cy="105" r="2" fill="#111" opacity="0.25"/>
-<circle cx="482" cy="128" r="3" fill="#111" opacity="0.25"/>
-<circle cx="519" cy="151" r="1" fill="#111" opacity="0.25"/>
-<circle cx="556" cy="174" r="2" fill="#111" opacity="0.25"/>
-<circle cx="593" cy="52" r="3" fill="#111" opacity="0.25"/><text x="360" y="158" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">형광등</text>
-<text x="360" y="186" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">깜빡임</text></g>
-<g transform="translate(0 3400)"><rect width="720" height="1500" fill="#000"/><text x="360" y="750" font-size="28" text-anchor="middle" fill="#333" font-family="Arial, 'Malgun Gothic', sans-serif">블랙 여백</text></g>
-<g transform="translate(0 4900)"><rect width="720" height="2500" fill="#fff"/><rect x="10" y="10" width="700" height="2480" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 06</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">누출 / 2500px</text>
-  </g>
-  <rect x="42" y="120" width="636" height="2290" fill="#f8f8f8" stroke="#111" stroke-width="4"/>
-  <line x1="42" y1="210" x2="678" y2="210" stroke="#111" stroke-width="3"/>
-  <line x1="42" y1="2330" x2="678" y2="2330" stroke="#111" stroke-width="3"/>
-  <rect x="116" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <rect x="246" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <rect x="376" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <rect x="506" y="250" width="120" height="64" fill="#e9e9e9" stroke="#111" stroke-width="3"/>
-  <line x1="360" y1="120" x2="360" y2="2330" stroke="#111" stroke-width="2" opacity="0.4"/>
-
-  <g>
-    <path d="M360 1980 C290 1680, 300 580, 360 360" fill="none" stroke="#111" stroke-width="6" stroke-dasharray="20 12"/>
-    <rect x="264" y="360" width="37" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="318" y="360" width="50" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="426" y="360" width="24" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="480" y="360" width="37" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="210" y="414" width="37" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="264" y="414" width="50" height="32" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="372" y="414" width="24" height="52" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="426" y="414" width="37" height="62" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="210" y="468" width="50" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="318" y="468" width="24" height="62" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="372" y="468" width="37" height="32" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="480" y="468" width="63" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="264" y="522" width="24" height="52" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="318" y="522" width="37" height="32" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="426" y="522" width="63" height="42" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="480" y="522" width="24" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="210" y="576" width="24" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="264" y="576" width="37" height="62" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="372" y="576" width="63" height="42" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="426" y="576" width="24" height="32" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="210" y="630" width="37" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="318" y="630" width="63" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="372" y="630" width="24" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="480" y="630" width="50" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="264" y="684" width="63" height="32" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="318" y="684" width="24" height="42" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="426" y="684" width="50" height="62" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="480" y="684" width="63" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="210" y="738" width="63" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="264" y="738" width="24" height="42" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="372" y="738" width="50" height="32" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="426" y="738" width="63" height="52" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="210" y="792" width="24" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="318" y="792" width="50" height="32" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="372" y="792" width="63" height="62" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="480" y="792" width="37" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="264" y="846" width="50" height="62" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="318" y="846" width="63" height="52" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="426" y="846" width="37" height="32" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="480" y="846" width="50" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="210" y="900" width="50" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="264" y="900" width="63" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="372" y="900" width="37" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="426" y="900" width="50" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="210" y="954" width="63" height="22" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="318" y="954" width="37" height="42" fill="#111" stroke="#111" stroke-width="3"/>
-<rect x="372" y="954" width="50" height="52" fill="#fff" stroke="#111" stroke-width="3"/>
-<rect x="480" y="954" width="24" height="22" fill="#fff" stroke="#111" stroke-width="3"/>
-    <line x1="230" y1="440" x2="230" y2="780" stroke="#111" stroke-width="7"/>
-<line x1="250" y1="440" x2="250" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="270" y1="440" x2="270" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="290" y1="440" x2="290" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="310" y1="440" x2="310" y2="780" stroke="#111" stroke-width="7"/>
-<line x1="330" y1="440" x2="330" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="350" y1="440" x2="350" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="370" y1="440" x2="370" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="390" y1="440" x2="390" y2="780" stroke="#111" stroke-width="7"/>
-<line x1="410" y1="440" x2="410" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="430" y1="440" x2="430" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="450" y1="440" x2="450" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="470" y1="440" x2="470" y2="780" stroke="#111" stroke-width="7"/>
-<line x1="490" y1="440" x2="490" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="510" y1="440" x2="510" y2="780" stroke="#111" stroke-width="2"/>
-<line x1="530" y1="440" x2="530" y2="780" stroke="#111" stroke-width="2"/>
-  </g>
-<text x="675" y="620" font-size="64" font-family="Arial, sans-serif" transform="rotate(90 675 620)">삐----</text>
-<text x="55" y="1520" font-size="18" font-family="Arial, sans-serif" transform="rotate(-90 55 1520)">CCTV BLOCK / BARCODE / LOW RESOLUTION LEAK</text><text x="360" y="2458" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">노이즈</text>
-<text x="360" y="2486" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">승객</text>
-<text x="360" y="2514" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">거대</text>
-<text x="360" y="2542" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">컷</text></g>
-<g transform="translate(0 7400)"><rect width="720" height="500" fill="#fff"/><rect x="10" y="10" width="700" height="480" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 07</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">폴리리듬 / 500px</text>
-  </g><ellipse cx="360" cy="250" rx="260" ry="120" fill="#fff" stroke="#111" stroke-width="6"/><circle cx="360" cy="250" r="74" fill="#fff" stroke="#111" stroke-width="5"/><circle cx="360" cy="250" r="28" fill="#111"/>
-<line x1="272" y1="190" x2="292" y2="310" stroke="#111" stroke-width="2" opacity="0.65"/>
-<line x1="289" y1="190" x2="305" y2="310" stroke="#111" stroke-width="3" opacity="0.65"/>
-<line x1="306" y1="190" x2="318" y2="310" stroke="#111" stroke-width="4" opacity="0.65"/>
-<line x1="323" y1="190" x2="331" y2="310" stroke="#111" stroke-width="2" opacity="0.65"/>
-<line x1="340" y1="190" x2="344" y2="310" stroke="#111" stroke-width="3" opacity="0.65"/>
-<line x1="357" y1="190" x2="357" y2="310" stroke="#111" stroke-width="4" opacity="0.65"/>
-<line x1="374" y1="190" x2="370" y2="310" stroke="#111" stroke-width="2" opacity="0.65"/>
-<line x1="391" y1="190" x2="383" y2="310" stroke="#111" stroke-width="3" opacity="0.65"/>
-<line x1="408" y1="190" x2="396" y2="310" stroke="#111" stroke-width="4" opacity="0.65"/>
-<line x1="425" y1="190" x2="409" y2="310" stroke="#111" stroke-width="2" opacity="0.65"/>
-<line x1="442" y1="190" x2="422" y2="310" stroke="#111" stroke-width="3" opacity="0.65"/><text x="360" y="458" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">서윤</text>
-<text x="360" y="486" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">눈</text>
-<text x="360" y="514" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">클로즈업</text></g>
-<g transform="translate(0 7900)"><rect width="720" height="600" fill="#fff"/><rect x="10" y="10" width="700" height="580" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 08</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">폴리리듬 / 600px</text>
-  </g><rect x="88" y="110" width="544" height="390" fill="#f5f5f5" stroke="#111" stroke-width="5" stroke-dasharray="18 12"/>
-<rect x="130" y="170" width="170" height="120" fill="#ddd" stroke="#111" stroke-width="3"/><path d="M390 170 l-40 170 h80 z" fill="none" stroke="#111" stroke-width="5"/><rect x="430" y="330" width="135" height="70" fill="#fff" stroke="#111" stroke-width="4" transform="rotate(-8 500 365)"/><path d="M210 420 q40 -65 80 0" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round"/>
-
-  <g>
-    <rect x="70" y="410" width="410" height="220" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
-    <text x="275" y="444" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">도.</text>
-<text x="275" y="476" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-<text x="275" y="508" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-<text x="275" y="540" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">착.</text>
-<text x="275" y="572" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-<text x="275" y="604" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-  </g><text x="360" y="558" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">노이즈</text>
-<text x="360" y="586" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">내부</text>
-<text x="360" y="614" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">단서</text></g>
-<g transform="translate(0 8500)"><rect width="720" height="700" fill="#fff"/><rect x="10" y="10" width="700" height="680" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 09</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">폴리리듬 / 700px</text>
-  </g><rect x="70" y="120" width="580" height="360" rx="12" fill="#0b0b0b" stroke="#111" stroke-width="5"/>
-<path d="M90 140 C140 220, 95 390, 170 455" fill="none" stroke="#fff" stroke-width="1" opacity="0.65"/>
-<path d="M120 140 C150 250, 123 390, 188 455" fill="none" stroke="#fff" stroke-width="2" opacity="0.65"/>
-<path d="M150 140 C160 280, 151 390, 206 455" fill="none" stroke="#fff" stroke-width="3" opacity="0.65"/>
-<path d="M180 140 C170 310, 179 390, 224 455" fill="none" stroke="#fff" stroke-width="4" opacity="0.65"/>
-<path d="M210 140 C180 340, 207 390, 242 455" fill="none" stroke="#fff" stroke-width="1" opacity="0.65"/>
-<path d="M240 140 C190 220, 235 390, 260 455" fill="none" stroke="#fff" stroke-width="2" opacity="0.65"/>
-<path d="M270 140 C200 250, 263 390, 278 455" fill="none" stroke="#fff" stroke-width="3" opacity="0.65"/>
-<path d="M300 140 C210 280, 291 390, 296 455" fill="none" stroke="#fff" stroke-width="4" opacity="0.65"/>
-<path d="M330 140 C220 310, 319 390, 314 455" fill="none" stroke="#fff" stroke-width="1" opacity="0.65"/>
-<path d="M360 140 C230 340, 347 390, 332 455" fill="none" stroke="#fff" stroke-width="2" opacity="0.65"/>
-<path d="M390 140 C240 220, 375 390, 350 455" fill="none" stroke="#fff" stroke-width="3" opacity="0.65"/>
-<path d="M420 140 C250 250, 403 390, 368 455" fill="none" stroke="#fff" stroke-width="4" opacity="0.65"/>
-<path d="M450 140 C260 280, 431 390, 386 455" fill="none" stroke="#fff" stroke-width="1" opacity="0.65"/>
-<path d="M480 140 C270 310, 459 390, 404 455" fill="none" stroke="#fff" stroke-width="2" opacity="0.65"/>
-<path d="M510 140 C280 340, 487 390, 422 455" fill="none" stroke="#fff" stroke-width="3" opacity="0.65"/>
-<path d="M540 140 C290 220, 515 390, 440 455" fill="none" stroke="#fff" stroke-width="4" opacity="0.65"/>
-<path d="M570 140 C300 250, 543 390, 458 455" fill="none" stroke="#fff" stroke-width="1" opacity="0.65"/>
-<path d="M600 140 C310 280, 571 390, 476 455" fill="none" stroke="#fff" stroke-width="2" opacity="0.65"/>
-
-  <g>
-    <rect x="70" y="510" width="410" height="64" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
-    <text x="275" y="544" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">2:17</text>
-  </g><text x="360" y="658" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">터널이</text>
-<text x="360" y="686" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">정보</text>
-<text x="360" y="714" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">구조로</text>
-<text x="360" y="742" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">변함</text></g>
-<g transform="translate(0 9200)"><rect width="720" height="300" fill="#fff"/><rect x="10" y="10" width="700" height="280" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 10</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">엇박 / 300px</text>
-  </g><path d="M125 150 C250 110 390 120 585 150" fill="none" stroke="#111" stroke-width="46" stroke-linecap="round"/>
-<rect x="285" y="126" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="305" y="126" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="325" y="126" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="345" y="126" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="365" y="126" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="385" y="126" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="405" y="126" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="285" y="150" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="305" y="150" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="325" y="150" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="345" y="150" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="365" y="150" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="385" y="150" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-<rect x="405" y="150" width="15" height="15" fill="#fff" stroke="#111" stroke-width="2"/>
-
-  <g>
-    <rect x="70" y="110" width="410" height="156" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
-    <text x="275" y="144" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">아니야.</text>
-<text x="275" y="176" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif"></text>
-<text x="275" y="208" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">오늘은</text>
-<text x="275" y="240" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">아니야.</text>
-  </g><text x="360" y="258" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">손목</text>
-<text x="360" y="286" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">픽셀</text>
-<text x="360" y="314" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">무늬</text></g>
-<g transform="translate(0 9500)"><rect width="720" height="800" fill="#fff"/><rect x="10" y="10" width="700" height="780" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 11</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">정박 복귀 / 800px</text>
-  </g><rect x="90" y="120" width="240" height="520" fill="#fff" stroke="#111" stroke-width="5"/><rect x="390" y="120" width="240" height="520" fill="#f5f5f5" stroke="#111" stroke-width="5"/><path d="M360 120 V640" stroke="#111" stroke-width="8"/>
-
-  <g transform="translate(235 520) scale(0.82)" stroke="#111" stroke-width="4" fill="none">
-    <circle cx="0" cy="-90" r="36" fill="#fff"/>
-    <path d="M-22 -125 Q0 -155 25 -122" />
-    <line x1="0" y1="-54" x2="-10" y2="70"/>
-    <line x1="-10" y1="-10" x2="-62" y2="34"/>
-    <line x1="-6" y1="-2" x2="42" y2="30"/>
-    <line x1="-10" y1="70" x2="-48" y2="160"/>
-    <line x1="-10" y1="70" x2="28" y2="160"/>
-    <rect x="46" y="4" width="52" height="72" fill="#fff"/>
-  </g>
-<text x="580" y="118" font-size="28" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">&quot;이번 역은...&quot;</text><text x="360" y="758" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">문</text>
-<text x="360" y="786" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">열림,</text>
-<text x="360" y="814" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">정상</text>
-<text x="360" y="842" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">안내방송</text></g>
-<g transform="translate(0 10300)"><rect width="720" height="500" fill="#000"/><text x="360" y="250" font-size="28" text-anchor="middle" fill="#333" font-family="Arial, 'Malgun Gothic', sans-serif">블랙 여백</text></g>
-<g transform="translate(0 10800)"><rect width="720" height="1000" fill="#fff"/><rect x="10" y="10" width="700" height="980" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 12</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">불안정 정박 / 1000px</text>
-  </g><rect x="40" y="110" width="640" height="790" fill="#f9f9f9" stroke="#111" stroke-width="4"/>
-<path d="M290 210 q40 -35 95 0 l-25 58 h-70 z" fill="#fff" stroke="#111" stroke-width="5"/><path d="M405 210 q40 -35 95 0 l-25 58 h-70 z" fill="#fff" stroke="#111" stroke-width="5"/>
-<rect x="175" y="410" width="4" height="4" fill="#111" opacity="0.25"/>
-<rect x="222" y="441" width="7" height="7" fill="#111" opacity="0.35"/>
-<rect x="269" y="472" width="10" height="10" fill="#111" opacity="0.45"/>
-<rect x="316" y="503" width="13" height="13" fill="#111" opacity="0.55"/>
-<rect x="363" y="534" width="16" height="4" fill="#111" opacity="0.65"/>
-<rect x="410" y="565" width="4" height="7" fill="#111" opacity="0.75"/>
-<rect x="457" y="596" width="7" height="10" fill="#111" opacity="0.25"/>
-<rect x="504" y="627" width="10" height="13" fill="#111" opacity="0.35"/>
-<rect x="191" y="658" width="13" height="4" fill="#111" opacity="0.45"/>
-<rect x="238" y="689" width="16" height="7" fill="#111" opacity="0.55"/>
-<rect x="285" y="410" width="4" height="10" fill="#111" opacity="0.65"/>
-<rect x="332" y="441" width="7" height="13" fill="#111" opacity="0.75"/>
-<rect x="379" y="472" width="10" height="4" fill="#111" opacity="0.25"/>
-<rect x="426" y="503" width="13" height="7" fill="#111" opacity="0.35"/>
-<rect x="473" y="534" width="16" height="10" fill="#111" opacity="0.45"/>
-<rect x="520" y="565" width="4" height="13" fill="#111" opacity="0.55"/>
-<rect x="207" y="596" width="7" height="4" fill="#111" opacity="0.65"/>
-<rect x="254" y="627" width="10" height="7" fill="#111" opacity="0.75"/>
-<rect x="301" y="658" width="13" height="10" fill="#111" opacity="0.25"/>
-<rect x="348" y="689" width="16" height="13" fill="#111" opacity="0.35"/>
-<rect x="395" y="410" width="4" height="4" fill="#111" opacity="0.45"/>
-<rect x="442" y="441" width="7" height="7" fill="#111" opacity="0.55"/>
-<rect x="489" y="472" width="10" height="10" fill="#111" opacity="0.65"/>
-<rect x="176" y="503" width="13" height="13" fill="#111" opacity="0.75"/>
-<rect x="223" y="534" width="16" height="4" fill="#111" opacity="0.25"/>
-<rect x="270" y="565" width="4" height="7" fill="#111" opacity="0.35"/>
-<rect x="317" y="596" width="7" height="10" fill="#111" opacity="0.45"/>
-<rect x="364" y="627" width="10" height="13" fill="#111" opacity="0.55"/>
-<rect x="411" y="658" width="13" height="4" fill="#111" opacity="0.65"/>
-<rect x="458" y="689" width="16" height="7" fill="#111" opacity="0.75"/>
-<rect x="505" y="410" width="4" height="10" fill="#111" opacity="0.25"/>
-<rect x="192" y="441" width="7" height="13" fill="#111" opacity="0.35"/>
-<rect x="239" y="472" width="10" height="4" fill="#111" opacity="0.45"/>
-<rect x="286" y="503" width="13" height="7" fill="#111" opacity="0.55"/>
-<rect x="333" y="534" width="16" height="10" fill="#111" opacity="0.65"/>
-<rect x="380" y="565" width="4" height="13" fill="#111" opacity="0.75"/>
-<rect x="427" y="596" width="7" height="4" fill="#111" opacity="0.25"/>
-<rect x="474" y="627" width="10" height="7" fill="#111" opacity="0.35"/>
-<rect x="521" y="658" width="13" height="10" fill="#111" opacity="0.45"/>
-<rect x="208" y="689" width="16" height="13" fill="#111" opacity="0.55"/>
-<rect x="255" y="410" width="4" height="4" fill="#111" opacity="0.65"/>
-<rect x="302" y="441" width="7" height="7" fill="#111" opacity="0.75"/>
-<rect x="349" y="472" width="10" height="10" fill="#111" opacity="0.25"/>
-<rect x="396" y="503" width="13" height="13" fill="#111" opacity="0.35"/>
-<rect x="443" y="534" width="16" height="4" fill="#111" opacity="0.45"/>
-<rect x="490" y="565" width="4" height="7" fill="#111" opacity="0.55"/>
-<rect x="177" y="596" width="7" height="10" fill="#111" opacity="0.65"/>
-<rect x="224" y="627" width="10" height="13" fill="#111" opacity="0.75"/>
-<rect x="271" y="658" width="13" height="4" fill="#111" opacity="0.25"/>
-<rect x="318" y="689" width="16" height="7" fill="#111" opacity="0.35"/>
-<rect x="365" y="410" width="4" height="10" fill="#111" opacity="0.45"/>
-<rect x="412" y="441" width="7" height="13" fill="#111" opacity="0.55"/>
-<rect x="459" y="472" width="10" height="4" fill="#111" opacity="0.65"/>
-<rect x="506" y="503" width="13" height="7" fill="#111" opacity="0.75"/>
-<rect x="193" y="534" width="16" height="10" fill="#111" opacity="0.25"/>
-<rect x="240" y="565" width="4" height="13" fill="#111" opacity="0.35"/>
-<rect x="287" y="596" width="7" height="4" fill="#111" opacity="0.45"/>
-<rect x="334" y="627" width="10" height="7" fill="#111" opacity="0.55"/>
-<rect x="381" y="658" width="13" height="10" fill="#111" opacity="0.65"/>
-<rect x="428" y="689" width="16" height="13" fill="#111" opacity="0.75"/>
-<rect x="475" y="410" width="4" height="4" fill="#111" opacity="0.25"/>
-<rect x="522" y="441" width="7" height="7" fill="#111" opacity="0.35"/>
-<rect x="209" y="472" width="10" height="10" fill="#111" opacity="0.45"/>
-<rect x="256" y="503" width="13" height="13" fill="#111" opacity="0.55"/>
-<rect x="303" y="534" width="16" height="4" fill="#111" opacity="0.65"/>
-<rect x="350" y="565" width="4" height="7" fill="#111" opacity="0.75"/>
-<rect x="397" y="596" width="7" height="10" fill="#111" opacity="0.25"/>
-<rect x="444" y="627" width="10" height="13" fill="#111" opacity="0.35"/>
-<rect x="491" y="658" width="13" height="4" fill="#111" opacity="0.45"/>
-<rect x="178" y="689" width="16" height="7" fill="#111" opacity="0.55"/>
-<rect x="225" y="410" width="4" height="10" fill="#111" opacity="0.65"/>
-<rect x="272" y="441" width="7" height="13" fill="#111" opacity="0.75"/>
-<rect x="319" y="472" width="10" height="4" fill="#111" opacity="0.25"/>
-<rect x="366" y="503" width="13" height="7" fill="#111" opacity="0.35"/>
-<rect x="413" y="534" width="16" height="10" fill="#111" opacity="0.45"/>
-<rect x="460" y="565" width="4" height="13" fill="#111" opacity="0.55"/>
-<rect x="507" y="596" width="7" height="4" fill="#111" opacity="0.65"/>
-<rect x="194" y="627" width="10" height="7" fill="#111" opacity="0.75"/>
-<rect x="241" y="658" width="13" height="10" fill="#111" opacity="0.25"/>
-<rect x="288" y="689" width="16" height="13" fill="#111" opacity="0.35"/>
-
-  <g>
-    <rect x="70" y="810" width="410" height="188" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
-    <text x="275" y="844" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-<text x="275" y="876" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-<text x="275" y="908" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-<text x="275" y="940" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">또</text>
-<text x="275" y="972" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">샜어.</text>
-  </g><text x="360" y="958" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">바닥의</text>
-<text x="360" y="986" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">픽셀</text>
-<text x="360" y="1014" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">가루</text></g>
-<g transform="translate(0 11800)"><rect width="720" height="800" fill="#fff"/><rect x="10" y="10" width="700" height="780" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 13</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">단서 / 800px</text>
-  </g><rect x="165" y="215" width="390" height="210" fill="#fff" stroke="#111" stroke-width="5" transform="rotate(-8 360 320)"/>
-<text x="252" y="305" font-size="48" font-family="Arial, sans-serif" transform="rotate(-8 360 320)">1999</text><text x="350" y="370" font-size="42" font-family="Arial, sans-serif" transform="rotate(-8 360 320)">02:17</text>
-<path d="M125 530 C260 450 360 520 470 460" fill="none" stroke="#111" stroke-width="18" stroke-linecap="round"/>
-
-  <g>
-    <rect x="70" y="610" width="410" height="124" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
-    <text x="275" y="644" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">1999</text>
-<text x="275" y="676" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">/</text>
-<text x="275" y="708" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">02:17</text>
-  </g><text x="360" y="758" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">승차권</text>
-<text x="360" y="786" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">조각으로</text>
-<text x="360" y="814" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">변함</text></g>
-<g transform="translate(0 12600)"><rect width="720" height="600" fill="#fff"/><rect x="10" y="10" width="700" height="580" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 14</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">훅 / 600px</text>
-  </g><rect x="190" y="85" width="340" height="470" rx="38" fill="#fff" stroke="#111" stroke-width="7"/><rect x="220" y="150" width="280" height="330" fill="#f7f7f7" stroke="#111" stroke-width="3"/>
-<rect x="245" y="210" width="230" height="160" rx="16" fill="#fff" stroke="#111" stroke-width="3"/>
-<text x="360" y="250" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">내일</text>
-<text x="360" y="279" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">오지</text>
-<text x="360" y="308" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">마십시오.</text>
-<text x="360" y="337" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif"></text>
-<text x="360" y="366" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">그</text>
-<text x="360" y="395" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">시간에</text>
-<text x="360" y="424" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">보면,</text>
-<text x="360" y="453" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">그쪽도</text>
-<text x="360" y="482" font-size="21" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">기록됩니다.</text>
-<line x1="330" y1="392" x2="455" y2="392" stroke="#111" stroke-width="4" stroke-dasharray="8 5"/><text x="360" y="558" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">박도겸</text>
-<text x="360" y="586" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">문자</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="20000" viewBox="0 0 720 20000">
+  <title>EP01 구성도 초안 v2: 필터의 누출</title>
+  <g transform="translate(0 0)">
+  <title>01 폐역_제보영상_1999.mp4 재생 준비</title>
+  <rect x="0" y="0" width="720" height="900" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="864" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">01 / 정박 / 900px</text><text x="360" y="808" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">폐역_제보영상_1999.mp4 재생 준비</text><text x="360" y="856" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">회의실 와이드</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">제보 영상부터 볼게요.</text><text x="36" y="856" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">프롤로그 파일 알림 연결</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="100" y="380" width="520" height="170" rx="10" fill="#f2f4f7" stroke="#cbd5e1"/><rect x="185" y="205" width="350" height="190" fill="#111"/><rect x="207" y="230" width="306" height="140" fill="#f8fafc"/><text x="360" y="310" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">폐역_제보영상_1999.mp4 재생 준비</text><circle cx="210" cy="510" r="28" fill="#6b7280"/><circle cx="500" cy="505" r="28" fill="#9ca3af"/>
+</g>
+<g transform="translate(0 900)">
+  <title>02 동료들은 무관심, 서윤만 집중</title>
+  <rect x="0" y="0" width="720" height="750" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="714" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">02 / 정박 / 750px</text><text x="360" y="658" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">동료들은 무관심, 서윤만 집중</text><text x="360" y="706" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">회의실 측면</text><text x="36" y="706" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">정상 업무 UI</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="100" y="305" width="520" height="170" rx="10" fill="#f2f4f7" stroke="#cbd5e1"/><rect x="185" y="130" width="350" height="190" fill="#111"/><rect x="207" y="155" width="306" height="140" fill="#f8fafc"/><text x="360" y="235" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">동료들은 무관심, 서윤만 집중</text><circle cx="210" cy="435" r="28" fill="#6b7280"/><circle cx="500" cy="430" r="28" fill="#9ca3af"/>
+</g>
+<g transform="translate(0 1650)">
+  <title>03 폐역 CCTV, 작은 여자 형체</title>
+  <rect x="0" y="0" width="720" height="900" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="864" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">03 / 정박 / 900px</text><text x="360" y="808" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">폐역 CCTV, 작은 여자 형체</text><text x="360" y="856" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">모니터 클로즈업</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">귀신이면 움직여야지.</text><text x="36" y="856" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">02:16:58</text>
+  <rect x="86" y="240" width="548" height="350" fill="#1f2933"/><rect x="130" y="280" width="460" height="250" fill="#d1d5db"/><text x="360" y="330" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, sans-serif">1999.07.18</text><text x="360" y="366" font-size="34" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-weight="700">02:16:58</text><path d="M360 420 l28 90 h-56 z" fill="#111" opacity=".55"/><path d="M390 424 l28 90 h-56 z" fill="#ef4444" opacity=".25"/>
+</g>
+<g transform="translate(0 2550)">
+  <title>04 02:17:00, 윤곽 한 박자 지연</title>
+  <rect x="0" y="0" width="720" height="650" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="614" fill="none" stroke="#ec6f35" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">04 / 미세 엇박 / 650px</text><text x="360" y="558" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">02:17:00, 윤곽 한 박자 지연</text><text x="360" y="606" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">CCTV 타임코드</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">지직</text><text x="36" y="606" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">프롤로그 현상 반복</text>
+  <rect x="86" y="115" width="548" height="350" fill="#1f2933"/><rect x="130" y="155" width="460" height="250" fill="#d1d5db"/><text x="360" y="205" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, sans-serif">1999.07.18</text><text x="360" y="241" font-size="34" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-weight="700">02:17:00</text><path d="M360 295 l28 90 h-56 z" fill="#111" opacity=".55"/><path d="M390 299 l28 90 h-56 z" fill="#ef4444" opacity=".25"/>
+</g>
+<g transform="translate(0 3200)">
+  <title>05 화이트아웃</title>
+  <rect x="0" y="0" width="720" height="300" fill="#fffdf5"/><rect x="18" y="18" width="684" height="264" fill="none" stroke="#ec6f35" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">05 / 강한 엇박 / 300px</text><text x="360" y="208" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">화이트아웃</text><text x="360" y="256" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">모니터 전체</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">무음</text><text x="36" y="256" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">블랙아웃 금지</text>
+  <rect x="0" y="0" width="720" height="300" fill="#fffdf3"/><rect x="70" y="100" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="167" y="129" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="264" y="158" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="361" y="187" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="458" y="216" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="555" y="125" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="82" y="154" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="179" y="183" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="276" y="212" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="373" y="121" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="470" y="150" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="567" y="179" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="94" y="208" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="191" y="117" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="288" y="146" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="385" y="175" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="482" y="204" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="579" y="113" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="106" y="142" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="203" y="171" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="300" y="200" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="397" y="109" width="5" height="5" fill="#f2c94c" opacity=".35"/><text x="360" y="150" font-size="32" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">화이트아웃</text>
+</g>
+<g transform="translate(0 3500)">
+  <title>06 02:17, 폐역, 횡단보도, 교복</title>
+  <rect x="0" y="0" width="720" height="1300" fill="#fffdf5"/><rect x="18" y="18" width="684" height="1264" fill="none" stroke="#ec6f35" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">06 / 누출 / 1300px</text><text x="360" y="1208" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">02:17, 폐역, 횡단보도, 교복</text><text x="360" y="1256" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">흰 화면 중첩</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">도...착...</text><text x="36" y="1256" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">설명 없이 겹침</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="90" y="500" width="540" height="260" rx="14" fill="#f3f4f6" stroke="#cbd5e1"/><text x="360" y="650" font-size="28" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">02:17, 폐역, 횡단보도, 교복</text>
+</g>
+<g transform="translate(0 4800)">
+  <title>07 팀장은 재생 오류로 인식</title>
+  <rect x="0" y="0" width="720" height="800" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="764" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">07 / 정박 복귀 / 800px</text><text x="360" y="708" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">팀장은 재생 오류로 인식</text><text x="360" y="756" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">회의실</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">계속 틀어보세요.</text><text x="36" y="756" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">서윤은 확인 요구</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="100" y="330" width="520" height="170" rx="10" fill="#f2f4f7" stroke="#cbd5e1"/><rect x="185" y="155" width="350" height="190" fill="#111"/><rect x="207" y="180" width="306" height="140" fill="#f8fafc"/><text x="360" y="260" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">팀장은 재생 오류로 인식</text><circle cx="210" cy="460" r="28" fill="#6b7280"/><circle cx="500" cy="455" r="28" fill="#9ca3af"/>
+</g>
+<g transform="translate(0 5600)">
+  <title>08 손목 픽셀 무늬</title>
+  <rect x="0" y="0" width="720" height="700" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="664" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">08 / 얇은 확인 / 700px</text><text x="360" y="608" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">손목 픽셀 무늬</text><text x="360" y="656" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">손목 클로즈업</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">횡단보도랑 같은 패턴.</text><text x="36" y="656" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">프롤로그 연결</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><circle cx="360" cy="250" r="76" fill="#d6b28d"/><rect x="300" y="330" width="120" height="230" rx="38" fill="#374151"/><rect x="430" y="380" width="120" height="36" rx="18" fill="#d6b28d"/><text x="492" y="408" font-size="16" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif">PIXEL</text>
+</g>
+<g transform="translate(0 6300)">
+  <title>09 사건 단어 정리</title>
+  <rect x="0" y="0" width="720" height="850" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="814" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">09 / 정박 / 850px</text><text x="360" y="758" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">사건 단어 정리</text><text x="360" y="806" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">회의 자료</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">오늘 원본 먼저 확인하고요.</text><text x="36" y="806" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">다음 행동 목표</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="100" y="355" width="520" height="170" rx="10" fill="#f2f4f7" stroke="#cbd5e1"/><rect x="185" y="180" width="350" height="190" fill="#111"/><rect x="207" y="205" width="306" height="140" fill="#f8fafc"/><text x="360" y="285" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">사건 단어 정리</text><circle cx="210" cy="485" r="28" fill="#6b7280"/><circle cx="500" cy="480" r="28" fill="#9ca3af"/>
+</g>
+<g transform="translate(0 7150)">
+  <title>10 업로더 없음, 02:17 고정</title>
+  <rect x="0" y="0" width="720" height="900" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="864" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">10 / 단서 / 900px</text><text x="360" y="808" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">업로더 없음, 02:17 고정</text><text x="360" y="856" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">파일 정보 창</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">업로더가 없어요.</text><text x="36" y="856" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">파일 자체 이상</text>
+  <rect x="250" y="240" width="220" height="420" rx="28" fill="#111"/><rect x="270" y="275" width="180" height="350" rx="8" fill="#f8fafc"/><rect x="292" y="328" width="136" height="84" fill="#e5e7eb"/><text x="360" y="370" font-size="18" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">업로더 없음, 02:17 고정</text><text x="360" y="505" font-size="28" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-weight="700">02:17</text>
+</g>
+<g transform="translate(0 8050)">
+  <title>11 직원 그림자 프레임 지연</title>
+  <rect x="0" y="0" width="720" height="800" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="764" fill="none" stroke="#ec6f35" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">11 / 짧은 엇박 / 800px</text><text x="360" y="708" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">직원 그림자 프레임 지연</text><text x="360" y="756" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">유리벽 너머</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">사무실까지.</text><text x="36" y="756" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">현상 확산</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="90" y="250" width="540" height="260" rx="14" fill="#f3f4f6" stroke="#cbd5e1"/><text x="360" y="400" font-size="28" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">직원 그림자 프레임 지연</text>
+</g>
+<g transform="translate(0 8850)">
+  <title>12 골든아워 지상 구간, 생활감 있는 승객들</title>
+  <rect x="0" y="0" width="720" height="1000" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="964" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">12 / 정박 / 1000px</text><text x="360" y="908" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">골든아워 지상 구간, 생활감 있는 승객들</text><text x="360" y="956" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">밝은 지상철 와이드</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">덜컹. 덜컹. / 작은 대화</text><text x="36" y="956" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">어두운 지하철 톤 회피</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="40" y="280" width="640" height="360" rx="18" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/><rect x="80" y="330" width="180" height="120" fill="#dbeafe"/><rect x="460" y="330" width="180" height="120" fill="#dbeafe"/><path d="M70 620 L650 400" stroke="#ffd166" stroke-width="24" opacity=".35"/><circle cx="230" cy="528" r="32" fill="#6b7280"/><circle cx="490" cy="528" r="32" fill="#9ca3af"/>
+</g>
+<g transform="translate(0 9850)">
+  <title>13 폐역 / 02:17 / 1999 / 원본 확인</title>
+  <rect x="0" y="0" width="720" height="750" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="714" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">13 / 정박 / 750px</text><text x="360" y="658" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">폐역 / 02:17 / 1999 / 원본</text><text x="360" y="688" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">확인</text><text x="360" y="706" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">봉투 클로즈업</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">움직인 게 아니라, 밀렸어.</text><text x="36" y="706" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">패턴 분석</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="90" y="225" width="540" height="260" rx="14" fill="#f3f4f6" stroke="#cbd5e1"/><text x="360" y="375" font-size="28" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">폐역 / 02:17 / 1999 / 원본 확</text>
+</g>
+<g transform="translate(0 10600)">
+  <title>14 운동화, 햇빛, 창문 프레임 그림자</title>
+  <rect x="0" y="0" width="720" height="800" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="764" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">14 / 정박 / 800px</text><text x="360" y="708" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">운동화, 햇빛, 창문 프레임 그림자</text><text x="360" y="756" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">밝은 바닥 앵글</text><text x="36" y="756" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">평범한 오후 이동감</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="40" y="180" width="640" height="360" rx="18" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/><rect x="80" y="230" width="180" height="120" fill="#dbeafe"/><rect x="460" y="230" width="180" height="120" fill="#dbeafe"/><path d="M70 520 L650 300" stroke="#ffd166" stroke-width="24" opacity=".35"/><circle cx="230" cy="428" r="32" fill="#6b7280"/><circle cx="490" cy="428" r="32" fill="#9ca3af"/>
+</g>
+<g transform="translate(0 11400)">
+  <title>15 햇빛 플레어 속 02:17 겹침</title>
+  <rect x="0" y="0" width="720" height="200" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="164" fill="none" stroke="#ec6f35" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">15 / 강한 엇박 / 200px</text><text x="360" y="108" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">햇빛 플레어 속 02:17 겹침</text><text x="360" y="156" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">안내 모니터+창 반사</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">무음</text><text x="36" y="156" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">눈부심처럼 시작</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="40" y="-120" width="640" height="360" rx="18" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/><rect x="80" y="-70" width="180" height="120" fill="#dbeafe"/><rect x="460" y="-70" width="180" height="120" fill="#dbeafe"/><path d="M70 220 L650 0" stroke="#ffd166" stroke-width="24" opacity=".35"/><circle cx="230" cy="128" r="32" fill="#6b7280"/><circle cx="490" cy="128" r="32" fill="#9ca3af"/><text x="360" y="100" font-size="62" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-weight="700" opacity=".75">02:17</text>
+</g>
+<g transform="translate(0 11600)">
+  <title>white_01 햇빛 먼지 같은 픽셀 입자</title>
+  <rect x="0" y="0" width="720" height="1200" fill="#fffdf5"/><rect x="18" y="18" width="684" height="1164" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">white_01 / 침묵 / 1200px</text><text x="360" y="1108" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">햇빛 먼지 같은 픽셀 입자</text><text x="360" y="1156" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">따뜻한 흰 공백</text><text x="36" y="1156" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">어둡게 가라앉히지 않기</text>
+  <rect x="0" y="0" width="720" height="1200" fill="#fffdf3"/><rect x="70" y="100" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="167" y="249" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="264" y="398" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="361" y="547" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="458" y="696" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="555" y="845" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="82" y="994" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="179" y="123" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="276" y="272" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="373" y="421" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="470" y="570" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="567" y="719" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="94" y="868" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="191" y="1017" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="288" y="146" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="385" y="295" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="482" y="444" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="579" y="593" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="106" y="742" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="203" y="891" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="300" y="1040" width="5" height="5" fill="#f2c94c" opacity=".35"/><rect x="397" y="169" width="5" height="5" fill="#f2c94c" opacity=".35"/><text x="360" y="600" font-size="32" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">햇빛 먼지 같은 픽셀 입자</text>
+</g>
+<g transform="translate(0 12800)">
+  <title>16 밝은 가장자리부터 풀리는 바코드/하얀 픽셀</title>
+  <rect x="0" y="0" width="720" height="2400" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="2364" fill="none" stroke="#ec6f35" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">16 / 누출 / 2400px</text><text x="360" y="2308" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">밝은 가장자리부터 풀리는 바코드/하얀 픽셀</text><text x="360" y="2356" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">승객 정면</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">삐----</text><text x="36" y="2356" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">괴물화 금지, 반사처럼</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><ellipse cx="360" cy="1145" rx="74" ry="90" fill="#d1d5db"/><rect x="290" y="1220" width="140" height="220" rx="42" fill="#cbd5e1"/><rect x="270" y="1020" width="8" height="8" fill="#fbbf24" opacity=".55"/><rect x="307" y="1073" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="344" y="1126" width="18" height="8" fill="#38bdf8" opacity=".55"/><rect x="381" y="1179" width="23" height="8" fill="#fbbf24" opacity=".55"/><rect x="418" y="1232" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="455" y="1285" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="302" y="1338" width="18" height="8" fill="#fbbf24" opacity=".55"/><rect x="339" y="1071" width="23" height="8" fill="#38bdf8" opacity=".55"/><rect x="376" y="1124" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="413" y="1177" width="13" height="8" fill="#fbbf24" opacity=".55"/><rect x="450" y="1230" width="18" height="8" fill="#38bdf8" opacity=".55"/><rect x="297" y="1283" width="23" height="8" fill="#38bdf8" opacity=".55"/><rect x="334" y="1336" width="8" height="8" fill="#fbbf24" opacity=".55"/><rect x="371" y="1069" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="408" y="1122" width="18" height="8" fill="#38bdf8" opacity=".55"/><rect x="445" y="1175" width="23" height="8" fill="#fbbf24" opacity=".55"/><rect x="292" y="1228" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="329" y="1281" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="366" y="1334" width="18" height="8" fill="#fbbf24" opacity=".55"/><rect x="403" y="1067" width="23" height="8" fill="#38bdf8" opacity=".55"/><rect x="440" y="1120" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="287" y="1173" width="13" height="8" fill="#fbbf24" opacity=".55"/><rect x="324" y="1226" width="18" height="8" fill="#38bdf8" opacity=".55"/><rect x="361" y="1279" width="23" height="8" fill="#38bdf8" opacity=".55"/><rect x="398" y="1332" width="8" height="8" fill="#fbbf24" opacity=".55"/><rect x="435" y="1065" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="282" y="1118" width="18" height="8" fill="#38bdf8" opacity=".55"/><rect x="319" y="1171" width="23" height="8" fill="#fbbf24" opacity=".55"/><rect x="356" y="1224" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="393" y="1277" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="430" y="1330" width="18" height="8" fill="#fbbf24" opacity=".55"/><rect x="277" y="1063" width="23" height="8" fill="#38bdf8" opacity=".55"/><rect x="314" y="1116" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="351" y="1169" width="13" height="8" fill="#fbbf24" opacity=".55"/><path d="M250 1020 C380 1120 470 1330 610 1390" stroke="#fff" stroke-width="22" opacity=".65" fill="none"/>
+</g>
+<g transform="translate(0 15200)">
+  <title>17 폐역/교복 자락/승차권/아이 손/횡단보도</title>
+  <rect x="0" y="0" width="720" height="900" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="864" fill="none" stroke="#ec6f35" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">17 / 폴리리듬 / 900px</text><text x="360" y="808" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">폐역/교복 자락/승차권/아이 손/횡단보도</text><text x="360" y="856" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">반투명 정보 중첩</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">도...착... / 2:17 / 기억하지...</text><text x="36" y="856" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">창문 반사처럼 얇게</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><ellipse cx="360" cy="395" rx="74" ry="90" fill="#d1d5db"/><rect x="290" y="470" width="140" height="220" rx="42" fill="#cbd5e1"/><rect x="270" y="270" width="8" height="8" fill="#fbbf24" opacity=".55"/><rect x="307" y="323" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="344" y="376" width="18" height="8" fill="#38bdf8" opacity=".55"/><rect x="381" y="429" width="23" height="8" fill="#fbbf24" opacity=".55"/><rect x="418" y="482" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="455" y="535" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="302" y="588" width="18" height="8" fill="#fbbf24" opacity=".55"/><rect x="339" y="321" width="23" height="8" fill="#38bdf8" opacity=".55"/><rect x="376" y="374" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="413" y="427" width="13" height="8" fill="#fbbf24" opacity=".55"/><rect x="450" y="480" width="18" height="8" fill="#38bdf8" opacity=".55"/><rect x="297" y="533" width="23" height="8" fill="#38bdf8" opacity=".55"/><rect x="334" y="586" width="8" height="8" fill="#fbbf24" opacity=".55"/><rect x="371" y="319" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="408" y="372" width="18" height="8" fill="#38bdf8" opacity=".55"/><rect x="445" y="425" width="23" height="8" fill="#fbbf24" opacity=".55"/><rect x="292" y="478" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="329" y="531" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="366" y="584" width="18" height="8" fill="#fbbf24" opacity=".55"/><rect x="403" y="317" width="23" height="8" fill="#38bdf8" opacity=".55"/><rect x="440" y="370" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="287" y="423" width="13" height="8" fill="#fbbf24" opacity=".55"/><rect x="324" y="476" width="18" height="8" fill="#38bdf8" opacity=".55"/><rect x="361" y="529" width="23" height="8" fill="#38bdf8" opacity=".55"/><rect x="398" y="582" width="8" height="8" fill="#fbbf24" opacity=".55"/><rect x="435" y="315" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="282" y="368" width="18" height="8" fill="#38bdf8" opacity=".55"/><rect x="319" y="421" width="23" height="8" fill="#fbbf24" opacity=".55"/><rect x="356" y="474" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="393" y="527" width="13" height="8" fill="#38bdf8" opacity=".55"/><rect x="430" y="580" width="18" height="8" fill="#fbbf24" opacity=".55"/><rect x="277" y="313" width="23" height="8" fill="#38bdf8" opacity=".55"/><rect x="314" y="366" width="8" height="8" fill="#38bdf8" opacity=".55"/><rect x="351" y="419" width="13" height="8" fill="#fbbf24" opacity=".55"/><path d="M250 270 C380 370 470 580 610 640" stroke="#fff" stroke-width="22" opacity=".65" fill="none"/>
+</g>
+<g transform="translate(0 16100)">
+  <title>18 휴대폰 녹화 시도</title>
+  <rect x="0" y="0" width="720" height="500" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="464" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">18 / 얇은 확인 / 500px</text><text x="360" y="408" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">휴대폰 녹화 시도</text><text x="360" y="456" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">서윤 얼굴</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">이번엔 찍혀야지.</text><text x="36" y="456" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">기록자 성격</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><circle cx="360" cy="150" r="76" fill="#d6b28d"/><rect x="300" y="230" width="120" height="230" rx="38" fill="#374151"/><rect x="430" y="280" width="120" height="36" rx="18" fill="#d6b28d"/><text x="492" y="308" font-size="16" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif">PIXEL</text>
+</g>
+<g transform="translate(0 16600)">
+  <title>19 정상 안내방송, 녹화 실패</title>
+  <rect x="0" y="0" width="720" height="850" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="814" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">19 / 정박 복귀 / 850px</text><text x="360" y="758" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">정상 안내방송, 녹화 실패</text><text x="360" y="806" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">열린 문</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">이번 역은...</text><text x="36" y="806" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">과노출 흰 썸네일</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="40" y="205" width="640" height="360" rx="18" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/><rect x="80" y="255" width="180" height="120" fill="#dbeafe"/><rect x="460" y="255" width="180" height="120" fill="#dbeafe"/><path d="M70 545 L650 325" stroke="#ffd166" stroke-width="24" opacity=".35"/><circle cx="230" cy="453" r="32" fill="#6b7280"/><circle cx="490" cy="453" r="32" fill="#9ca3af"/>
+</g>
+<g transform="translate(0 17450)">
+  <title>20 픽셀 가루가 스며듦</title>
+  <rect x="0" y="0" width="720" height="1000" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="964" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">20 / 불안정 정박 / 1000px</text><text x="360" y="908" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">픽셀 가루가 스며듦</text><text x="360" y="956" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">발밑</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">...또 샜어.</text><text x="36" y="956" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">물리 흔적 전 단계</text>
+  <rect x="0" y="0" width="720" height="1000" fill="#f6f3ee"/><path d="M120 580 C260 525 390 540 600 470" stroke="#e5e7eb" stroke-width="80"/><rect x="245" y="410" width="230" height="126" rx="8" fill="#f8fafc" stroke="#6b7280" stroke-dasharray="12 8"/><text x="360" y="465" font-size="38" text-anchor="middle" fill="#111" font-family="Arial, sans-serif" font-weight="700">1999</text><text x="360" y="512" font-size="30" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif">02:17</text>
+</g>
+<g transform="translate(0 18450)">
+  <title>21 오래된 승차권 조각</title>
+  <rect x="0" y="0" width="720" height="850" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="814" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">21 / 물증 / 850px</text><text x="360" y="758" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">오래된 승차권 조각</text><text x="360" y="806" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">바닥 클로즈업</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">1999 / 02:17</text><text x="36" y="806" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">폐역명 일부</text>
+  <rect x="0" y="0" width="720" height="850" fill="#f6f3ee"/><path d="M120 505 C260 450 390 465 600 395" stroke="#e5e7eb" stroke-width="80"/><rect x="245" y="335" width="230" height="126" rx="8" fill="#f8fafc" stroke="#6b7280" stroke-dasharray="12 8"/><text x="360" y="390" font-size="38" text-anchor="middle" fill="#111" font-family="Arial, sans-serif" font-weight="700">1999</text><text x="360" y="437" font-size="30" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif">02:17</text>
+</g>
+<g transform="translate(0 19300)">
+  <title>22 저장명 없는 번호 경고 문자</title>
+  <rect x="0" y="0" width="720" height="700" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="664" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">22 / 훅 / 700px</text><text x="360" y="608" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">저장명 없는 번호 경고 문자</text><text x="360" y="656" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">휴대폰 화면</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">그쪽도 기록됩니다.</text><text x="36" y="656" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">발신자 정체 미공개</text>
+  <rect x="250" y="140" width="220" height="420" rx="28" fill="#111"/><rect x="270" y="175" width="180" height="350" rx="8" fill="#f8fafc"/><rect x="292" y="228" width="136" height="84" fill="#e5e7eb"/><text x="360" y="270" font-size="18" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">저장명 없는 번호 경고 문자</text><text x="360" y="405" font-size="28" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-weight="700">02:17</text>
+</g>
 </svg>

@@ -1,23 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="600" viewBox="0 0 720 600">
-  <title>EP01 08 노이즈 내부 단서</title>
-  <rect width="720" height="600" fill="#fff"/><rect x="10" y="10" width="700" height="580" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 08</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">폴리리듬 / 600px</text>
-  </g><rect x="88" y="110" width="544" height="390" fill="#f5f5f5" stroke="#111" stroke-width="5" stroke-dasharray="18 12"/>
-<rect x="130" y="170" width="170" height="120" fill="#ddd" stroke="#111" stroke-width="3"/><path d="M390 170 l-40 170 h80 z" fill="none" stroke="#111" stroke-width="5"/><rect x="430" y="330" width="135" height="70" fill="#fff" stroke="#111" stroke-width="4" transform="rotate(-8 500 365)"/><path d="M210 420 q40 -65 80 0" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round"/>
-
-  <g>
-    <rect x="70" y="410" width="410" height="220" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
-    <text x="275" y="444" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">도.</text>
-<text x="275" y="476" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-<text x="275" y="508" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-<text x="275" y="540" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">착.</text>
-<text x="275" y="572" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-<text x="275" y="604" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">.</text>
-  </g><text x="360" y="558" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">노이즈</text>
-<text x="360" y="586" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">내부</text>
-<text x="360" y="614" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">단서</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="700" viewBox="0 0 720 700">
+  <title>08 손목 픽셀 무늬</title>
+  <rect x="0" y="0" width="720" height="700" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="664" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">08 / 얇은 확인 / 700px</text><text x="360" y="608" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">손목 픽셀 무늬</text><text x="360" y="656" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">손목 클로즈업</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">횡단보도랑 같은 패턴.</text><text x="36" y="656" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">프롤로그 연결</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><circle cx="360" cy="250" r="76" fill="#d6b28d"/><rect x="300" y="330" width="120" height="230" rx="38" fill="#374151"/><rect x="430" y="380" width="120" height="36" rx="18" fill="#d6b28d"/><text x="492" y="408" font-size="16" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif">PIXEL</text>
 </svg>

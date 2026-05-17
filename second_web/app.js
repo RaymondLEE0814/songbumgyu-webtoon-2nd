@@ -13,6 +13,14 @@
   // 홈 화면 복원용
   const homeHtml = article.innerHTML;
 
+  // 홈에서 한 번만 그릴 "최근 코멘트가 달린 문서" 호스트 노드 준비
+  function renderHomeActivityHost() {
+    const host = document.createElement("div");
+    host.id = "home-activity";
+    article.querySelector(".welcome")?.appendChild(host);
+    if (window.COMMENTS) window.COMMENTS.renderHomeActivity(host, meta);
+  }
+
   function escapeHtml(s) {
     return String(s)
       .replaceAll("&", "&amp;")
@@ -64,18 +72,23 @@
       setCrumb(null);
       setActiveNav(null);
       document.title = "웹툰 기획 2차 초안";
+      renderHomeActivityHost();
       return;
     }
     if (!meta[slug]) return;
     const html = getDocHtml(slug);
     if (html == null) return;
     const titleText = (meta[slug].breadcrumbs || []).slice(-1)[0] || meta[slug].title;
-    article.innerHTML = `<div class="md"><h1>${escapeHtml(titleText)}</h1>${html}</div>`;
+    article.innerHTML = `<div class="md"><h1>${escapeHtml(titleText)}</h1>${html}</div><div id="comments-host"></div>`;
     setCrumb(slug);
     setActiveNav(slug);
     document.title = `${titleText} · 웹툰 기획 2차 초안`;
     sidebar.classList.remove("open");
     window.scrollTo({ top: 0, behavior: "instant" });
+    if (window.COMMENTS) {
+      const host = document.getElementById("comments-host");
+      window.COMMENTS.mount(slug, host);
+    }
   }
 
   function currentSlug() {
@@ -86,6 +99,7 @@
   }
   window.addEventListener("hashchange", () => show(currentSlug()));
   if (currentSlug()) show(currentSlug());
+  else renderHomeActivityHost();
 
   menuBtn?.addEventListener("click", () => sidebar.classList.toggle("open"));
   document.addEventListener("click", (e) => {

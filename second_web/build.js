@@ -653,6 +653,8 @@ const HTML = ({ navHtml, cards, scripts }) => `<!DOCTYPE html>
 
 ${scripts}
 
+<script src="config.js"></script>
+<script src="comments.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

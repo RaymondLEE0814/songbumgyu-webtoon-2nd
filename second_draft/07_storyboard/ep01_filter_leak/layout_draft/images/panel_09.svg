@@ -1,36 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="700" viewBox="0 0 720 700">
-  <title>EP01 09 터널이 정보 구조로 변함</title>
-  <rect width="720" height="700" fill="#fff"/><rect x="10" y="10" width="700" height="680" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 09</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">폴리리듬 / 700px</text>
-  </g><rect x="70" y="120" width="580" height="360" rx="12" fill="#0b0b0b" stroke="#111" stroke-width="5"/>
-<path d="M90 140 C140 220, 95 390, 170 455" fill="none" stroke="#fff" stroke-width="1" opacity="0.65"/>
-<path d="M120 140 C150 250, 123 390, 188 455" fill="none" stroke="#fff" stroke-width="2" opacity="0.65"/>
-<path d="M150 140 C160 280, 151 390, 206 455" fill="none" stroke="#fff" stroke-width="3" opacity="0.65"/>
-<path d="M180 140 C170 310, 179 390, 224 455" fill="none" stroke="#fff" stroke-width="4" opacity="0.65"/>
-<path d="M210 140 C180 340, 207 390, 242 455" fill="none" stroke="#fff" stroke-width="1" opacity="0.65"/>
-<path d="M240 140 C190 220, 235 390, 260 455" fill="none" stroke="#fff" stroke-width="2" opacity="0.65"/>
-<path d="M270 140 C200 250, 263 390, 278 455" fill="none" stroke="#fff" stroke-width="3" opacity="0.65"/>
-<path d="M300 140 C210 280, 291 390, 296 455" fill="none" stroke="#fff" stroke-width="4" opacity="0.65"/>
-<path d="M330 140 C220 310, 319 390, 314 455" fill="none" stroke="#fff" stroke-width="1" opacity="0.65"/>
-<path d="M360 140 C230 340, 347 390, 332 455" fill="none" stroke="#fff" stroke-width="2" opacity="0.65"/>
-<path d="M390 140 C240 220, 375 390, 350 455" fill="none" stroke="#fff" stroke-width="3" opacity="0.65"/>
-<path d="M420 140 C250 250, 403 390, 368 455" fill="none" stroke="#fff" stroke-width="4" opacity="0.65"/>
-<path d="M450 140 C260 280, 431 390, 386 455" fill="none" stroke="#fff" stroke-width="1" opacity="0.65"/>
-<path d="M480 140 C270 310, 459 390, 404 455" fill="none" stroke="#fff" stroke-width="2" opacity="0.65"/>
-<path d="M510 140 C280 340, 487 390, 422 455" fill="none" stroke="#fff" stroke-width="3" opacity="0.65"/>
-<path d="M540 140 C290 220, 515 390, 440 455" fill="none" stroke="#fff" stroke-width="4" opacity="0.65"/>
-<path d="M570 140 C300 250, 543 390, 458 455" fill="none" stroke="#fff" stroke-width="1" opacity="0.65"/>
-<path d="M600 140 C310 280, 571 390, 476 455" fill="none" stroke="#fff" stroke-width="2" opacity="0.65"/>
-
-  <g>
-    <rect x="70" y="510" width="410" height="64" rx="18" fill="#fff" stroke="#111" stroke-width="3"/>
-    <text x="275" y="544" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">2:17</text>
-  </g><text x="360" y="658" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">터널이</text>
-<text x="360" y="686" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">정보</text>
-<text x="360" y="714" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">구조로</text>
-<text x="360" y="742" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">변함</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="850" viewBox="0 0 720 850">
+  <title>09 사건 단어 정리</title>
+  <rect x="0" y="0" width="720" height="850" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="814" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">09 / 정박 / 850px</text><text x="360" y="758" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">사건 단어 정리</text><text x="360" y="806" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">회의 자료</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">오늘 원본 먼저 확인하고요.</text><text x="36" y="806" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">다음 행동 목표</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="100" y="355" width="520" height="170" rx="10" fill="#f2f4f7" stroke="#cbd5e1"/><rect x="185" y="180" width="350" height="190" fill="#111"/><rect x="207" y="205" width="306" height="140" fill="#f8fafc"/><text x="360" y="285" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">사건 단어 정리</text><circle cx="210" cy="485" r="28" fill="#6b7280"/><circle cx="500" cy="480" r="28" fill="#9ca3af"/>
 </svg>

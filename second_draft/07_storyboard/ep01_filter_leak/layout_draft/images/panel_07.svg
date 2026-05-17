@@ -1,23 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="500" viewBox="0 0 720 500">
-  <title>EP01 07 서윤 눈 클로즈업</title>
-  <rect width="720" height="500" fill="#fff"/><rect x="10" y="10" width="700" height="480" fill="none" stroke="#111" stroke-width="4"/>
-  <g opacity="0.92">
-    <rect x="18" y="18" width="260" height="64" fill="#fff" stroke="#111" stroke-width="2"/>
-    <text x="34" y="44" font-size="20" font-weight="700" font-family="Arial, 'Malgun Gothic', sans-serif">CUT 07</text>
-    <text x="34" y="68" font-size="15" font-family="Arial, 'Malgun Gothic', sans-serif">폴리리듬 / 500px</text>
-  </g><ellipse cx="360" cy="250" rx="260" ry="120" fill="#fff" stroke="#111" stroke-width="6"/><circle cx="360" cy="250" r="74" fill="#fff" stroke="#111" stroke-width="5"/><circle cx="360" cy="250" r="28" fill="#111"/>
-<line x1="272" y1="190" x2="292" y2="310" stroke="#111" stroke-width="2" opacity="0.65"/>
-<line x1="289" y1="190" x2="305" y2="310" stroke="#111" stroke-width="3" opacity="0.65"/>
-<line x1="306" y1="190" x2="318" y2="310" stroke="#111" stroke-width="4" opacity="0.65"/>
-<line x1="323" y1="190" x2="331" y2="310" stroke="#111" stroke-width="2" opacity="0.65"/>
-<line x1="340" y1="190" x2="344" y2="310" stroke="#111" stroke-width="3" opacity="0.65"/>
-<line x1="357" y1="190" x2="357" y2="310" stroke="#111" stroke-width="4" opacity="0.65"/>
-<line x1="374" y1="190" x2="370" y2="310" stroke="#111" stroke-width="2" opacity="0.65"/>
-<line x1="391" y1="190" x2="383" y2="310" stroke="#111" stroke-width="3" opacity="0.65"/>
-<line x1="408" y1="190" x2="396" y2="310" stroke="#111" stroke-width="4" opacity="0.65"/>
-<line x1="425" y1="190" x2="409" y2="310" stroke="#111" stroke-width="2" opacity="0.65"/>
-<line x1="442" y1="190" x2="422" y2="310" stroke="#111" stroke-width="3" opacity="0.65"/><text x="360" y="458" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">서윤</text>
-<text x="360" y="486" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">눈</text>
-<text x="360" y="514" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">클로즈업</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="800" viewBox="0 0 720 800">
+  <title>07 팀장은 재생 오류로 인식</title>
+  <rect x="0" y="0" width="720" height="800" fill="#fbfbf7"/><rect x="18" y="18" width="684" height="764" fill="none" stroke="#222" stroke-width="4"/><text x="34" y="56" font-size="19" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">07 / 정박 복귀 / 800px</text><text x="360" y="708" font-size="22" text-anchor="middle" fill="#1f2933" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="700">팀장은 재생 오류로 인식</text><text x="360" y="756" font-size="16" text-anchor="middle" fill="#667085" font-family="Arial, 'Malgun Gothic', sans-serif">회의실</text><text x="686" y="58" font-size="22" text-anchor="end" font-weight="700" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">계속 틀어보세요.</text><text x="36" y="756" font-size="14" text-anchor="start" fill="#6b7280" font-family="Arial, 'Malgun Gothic', sans-serif">서윤은 확인 요구</text>
+  <circle cx="610" cy="110" r="46" fill="#ffd166" opacity=".65"/><path d="M80 160 C260 80 470 80 680 150" stroke="#ffd166" stroke-width="18" opacity=".25" fill="none"/><rect x="100" y="330" width="520" height="170" rx="10" fill="#f2f4f7" stroke="#cbd5e1"/><rect x="185" y="155" width="350" height="190" fill="#111"/><rect x="207" y="180" width="306" height="140" fill="#f8fafc"/><text x="360" y="260" font-size="24" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif">팀장은 재생 오류로 인식</text><circle cx="210" cy="460" r="28" fill="#6b7280"/><circle cx="500" cy="455" r="28" fill="#9ca3af"/>
 </svg>
