@@ -46,7 +46,10 @@
 
   // ---------- Gate ----------
   async function sha256Hex(s) {
-    const buf = new TextEncoder().encode(s);
+    // 한글은 NFC/NFD 두 형식이 같은 글자라도 바이트가 달라 해시도 달라짐.
+    // 입력 폼·운영체제에 따라 NFD 가 섞일 수 있어 항상 NFC 로 정규화한 뒤 해시.
+    const normalized = (s || "").normalize("NFC");
+    const buf = new TextEncoder().encode(normalized);
     const h = await crypto.subtle.digest("SHA-256", buf);
     return [...new Uint8Array(h)].map((x) => x.toString(16).padStart(2, "0")).join("");
   }
@@ -90,6 +93,13 @@
           unlock();
           close(true);
         } else {
+          // 진단용: 어떤 해시가 계산됐는지 보여 줘서 비교 가능하게 함.
+          // 실제 비밀번호 평문은 노출되지 않음.
+          console.warn(
+            "[gate] 비밀번호 해시 불일치\n  입력 해시: " + h +
+            "\n  설정 해시: " + cfg.GATE_PASSWORD_SHA256 +
+            "\n  (이 해시를 알려주면 어떤 글자가 들어갔는지 역추적 없이 확인 가능)"
+          );
           err.hidden = false;
           input.select();
         }
