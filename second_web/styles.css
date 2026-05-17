@@ -615,6 +615,32 @@ a:hover { color: var(--color-obsidian); }
 }
 .panel.panel-black .panel-link { background: #000; }
 
+/* ---------- 웹툰 뷰어 (최종 SVG) ---------- */
+.webtoon-viewer {
+  margin: 8px 0 0;
+  background: #fafafa;
+  border: 1px solid var(--color-fog);
+  border-radius: var(--radius-compact);
+  padding: 16px;
+}
+.webtoon-svg {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid var(--color-fog);
+}
+.webtoon-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
 /* ---------- 코멘트 ---------- */
 .comments {
   margin-top: 24px;

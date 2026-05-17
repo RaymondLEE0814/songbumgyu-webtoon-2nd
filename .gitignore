@@ -33,4 +33,10 @@ npm-debug.log*
 # second_draft 자동 백업 폴더
 /second_draft_backup_*/
 
+# 08_webtoon_svg: GitHub 50MB 한도 초과 + 내부 도구 파일 제외 (SVG/PNG 만 공개)
+**/08_webtoon_svg/**/*_embedded.svg
+**/08_webtoon_svg/**/make_*.js
+**/08_webtoon_svg/**/index.html
+**/08_webtoon_svg/**/dialogue_index.html
+
 .vercel

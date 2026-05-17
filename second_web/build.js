@@ -55,6 +55,7 @@ const LABEL = {
   "05_episode_draft": "05. 에피소드 초안",
   "06_character_assets": "06. 캐릭터 에셋",
   "07_storyboard": "07. 스토리보드",
+  "08_webtoon_svg": "08. 최종 웹툰 SVG",
   "99_review_revision_notes": "99. 검토 및 수정 노트",
   "콘티": "콘티",
   // 캐릭터 폴더
@@ -106,6 +107,7 @@ const SECTION_ORDER = [
   "05_episode_draft",
   "06_character_assets",
   "07_storyboard",
+  "08_webtoon_svg",
   "99_review_revision_notes",
   "콘티",
 ];
@@ -114,6 +116,7 @@ const SECTION_ORDER = [
 // 이미지는 계속 스캔되어 갤러리·페르소나 자동 주입에는 사용됨.
 const INTERNAL_SECTIONS = new Set([
   "06_character_assets",
+  "08_webtoon_svg", // 트리에서는 제외하고 별도 가상 섹션(웹툰 최종본)으로 노출
 ]);
 
 const kor = (name, fallback) => LABEL[name] ?? (fallback !== undefined ? fallback : name);
@@ -170,11 +173,26 @@ function copyImages() {
   const charImages = {};
   // 에피소드명 → { fullScroll: webUrl | null, panels: [{file, webUrl, label}] }
   const storyboardPanels = {};
+  // 최종 웹툰 SVG: 에피소드 폴더명 → [{file, webUrl, viewBox: {w,h} | null, kind}]
+  const finalWebtoons = {};
 
-  const files = walk(SRC).filter((f) => /\.(svg|png|jpe?g|gif|webp)$/i.test(f));
+  const files = walk(SRC)
+    .filter((f) => /\.(svg|png|jpe?g|gif|webp)$/i.test(f))
+    // GitHub 50MB 초과 + 웹 부적합한 embedded SVG 제외
+    .filter((f) => !/_embedded\.svg$/i.test(f));
   for (const f of files) {
     const dest = path.join(ASSETS, path.basename(f));
-    fs.copyFileSync(f, dest);
+
+    // SVG 라면 내부 href="assets/foo.png" 를 같은 폴더(flatten 후) 경로로 재작성하여 복사
+    if (/\.svg$/i.test(f)) {
+      let content = fs.readFileSync(f, "utf8");
+      // href="assets/something" → href="something" (둘 다 같은 /assets/images/ 로 평탄화되므로)
+      content = content.replace(/(xlink:href|href)="assets\/([^"]+)"/g, '$1="$2"');
+      fs.writeFileSync(dest, content, "utf8");
+    } else {
+      fs.copyFileSync(f, dest);
+    }
+
     const rel = path.relative(SRC, f).replaceAll("\\", "/");
     const webUrl = `assets/images/${path.basename(f)}`;
     map[rel] = webUrl;
@@ -206,14 +224,41 @@ function copyImages() {
         });
       }
     }
+
+    // 08_webtoon_svg/{episode}/*.svg → 최종 웹툰 인덱스 (assets 폴더의 PNG 는 SVG 가 알아서 참조)
+    if (parts[0] === "08_webtoon_svg" && /\.svg$/i.test(parts[2] || "")) {
+      const ep = parts[1];
+      finalWebtoons[ep] = finalWebtoons[ep] || [];
+      // viewBox 추출 (있으면 비율 유지에 사용)
+      let viewBox = null;
+      try {
+        const head = fs.readFileSync(f, "utf8").slice(0, 800);
+        const m = head.match(/viewBox="\s*0\s+0\s+([\d.]+)\s+([\d.]+)\s*"/i);
+        if (m) viewBox = { w: parseFloat(m[1]), h: parseFloat(m[2]) };
+      } catch (_) {}
+      finalWebtoons[ep].push({
+        file: path.basename(f),
+        webUrl,
+        viewBox,
+        // dialogue 가 들어있는 파일은 "대사 강화판"
+        kind: /dialogue/i.test(parts[2]) ? "dialogue" : "final",
+      });
+    }
   }
   for (const k of Object.keys(charImages)) {
     charImages[k].sort((a, b) => a.file.localeCompare(b.file));
   }
+  for (const k of Object.keys(finalWebtoons)) {
+    finalWebtoons[k].sort((a, b) => {
+      // 일반 final 을 먼저, dialogue 를 뒤로
+      if (a.kind !== b.kind) return a.kind === "final" ? -1 : 1;
+      return a.file.localeCompare(b.file);
+    });
+  }
   for (const k of Object.keys(storyboardPanels)) {
     storyboardPanels[k].panels.sort((a, b) => a.file.localeCompare(b.file));
   }
-  return { map, charImages, storyboardPanels };
+  return { map, charImages, storyboardPanels, finalWebtoons };
 }
 
 function humanizeFilename(stem) {
@@ -256,6 +301,16 @@ const STORYBOARD_SEQUENCES = {
 const EPISODE_LABEL = {
   ep01_filter_leak: "EP01 · 필터의 누출",
 };
+
+// 08_webtoon_svg 폴더명 라벨 (한국어)
+const FINAL_EP_LABEL = {
+  ep01_final: "EP01 · 필터의 누출",
+  prologue_final: "프롤로그 · 횡단보도 UI 누출",
+};
+function finalFileLabel(file) {
+  if (/dialogue/i.test(file)) return "대사 강화판";
+  return "최종본";
+}
 
 // ------------------------------------------------------------
 // 문서 트리 수집
@@ -423,6 +478,29 @@ ${cards}
 </section>`;
 }
 
+// 08_webtoon_svg/{ep}/*.svg → 뷰어 doc 생성
+function buildWebtoonViewerDoc(epKey, svgEntry) {
+  const epLabel = FINAL_EP_LABEL[epKey] || epKey;
+  const fileLabel = finalFileLabel(svgEntry.file);
+  const vb = svgEntry.viewBox;
+  const sizeNote = vb ? `폭 ${vb.w.toLocaleString()}px × 세로 ${vb.h.toLocaleString()}px` : "";
+  const html = `<p class="lead-note">${escapeHtml(epLabel)} · ${escapeHtml(fileLabel)}${sizeNote ? ` · ${escapeHtml(sizeNote)}` : ""}. 이미지 생성 모델로 만든 시트 위에 SVG 로 컷 경계·말풍선·대사를 얹은 최종본 초안입니다.</p>
+<div class="webtoon-viewer">
+  <object class="webtoon-svg" type="image/svg+xml" data="${svgEntry.webUrl}" aria-label="${escapeAttr(epLabel + ' ' + fileLabel)}">
+    <a href="${svgEntry.webUrl}" target="_blank" rel="noopener">SVG 직접 열기</a>
+  </object>
+  <div class="webtoon-actions">
+    <a class="btn-ghost" href="${svgEntry.webUrl}" target="_blank" rel="noopener">SVG 새 탭에서 보기</a>
+    <a class="btn-ghost" href="${svgEntry.webUrl}" download>SVG 다운로드</a>
+  </div>
+</div>`;
+  return {
+    title: `${epLabel} · ${fileLabel}`,
+    breadcrumbs: ["08. 최종 웹툰 SVG", epLabel, fileLabel],
+    html,
+  };
+}
+
 function buildStoryboardPanelDoc(epKey, panelsData) {
   const seq = STORYBOARD_SEQUENCES[epKey];
   const epLabel = EPISODE_LABEL[epKey] || epKey;
@@ -475,11 +553,38 @@ function escapeAttr(s) {
 // ------------------------------------------------------------
 // 네비 + 문서 dict 생성
 // ------------------------------------------------------------
-function buildNavAndDocs(tree, imgMap, charImages, storyboardPanels) {
+function buildNavAndDocs(tree, imgMap, charImages, storyboardPanels, finalWebtoons) {
   const docs = {};
   const navParts = [];
 
-  // ---- 가상 섹션: 캐릭터 비주얼 갤러리 (최상단) ----
+  // ---- 가상 섹션: 최종 웹툰 SVG (최상단, 가장 중요) ----
+  const finalDocsByEp = {};
+  const FINAL_EP_ORDER = ["prologue_final", "ep01_final"];
+  const epKeysInOrder = [
+    ...FINAL_EP_ORDER.filter((k) => finalWebtoons && finalWebtoons[k]),
+    ...Object.keys(finalWebtoons || {}).filter((k) => !FINAL_EP_ORDER.includes(k)),
+  ];
+  if (epKeysInOrder.length) {
+    navParts.push(`<div class="nav-section"><div class="nav-section-title">${escapeHtml(kor("08_webtoon_svg"))}</div><ul class="nav-list">`);
+    for (const epKey of epKeysInOrder) {
+      const items = finalWebtoons[epKey];
+      const epLabel = FINAL_EP_LABEL[epKey] || epKey;
+      navParts.push(`<li class="nav-group"><div class="nav-group-title">${escapeHtml(epLabel)}</div><ul class="nav-sublist">`);
+      const list = [];
+      for (const entry of items) {
+        const doc = buildWebtoonViewerDoc(epKey, entry);
+        const slug = slugify(["08_webtoon_svg", epKey, entry.file.replace(/\.svg$/i, "")]);
+        docs[slug] = doc;
+        list.push({ slug, fileLabel: finalFileLabel(entry.file) });
+        navParts.push(`<li><a href="#${slug}" data-slug="${slug}">${escapeHtml(finalFileLabel(entry.file))}</a></li>`);
+      }
+      finalDocsByEp[epKey] = list;
+      navParts.push("</ul></li>");
+    }
+    navParts.push("</ul></div>");
+  }
+
+  // ---- 가상 섹션: 캐릭터 비주얼 갤러리 ----
   const gallerySlug = "00_visual_gallery__all";
   docs[gallerySlug] = buildGalleryDoc(charImages);
   navParts.push(
@@ -531,7 +636,7 @@ function buildNavAndDocs(tree, imgMap, charImages, storyboardPanels) {
     }
     navParts.push("</ul></div>");
   }
-  return { navHtml: navParts.join(""), docs, gallerySlug, panelDocsByEp };
+  return { navHtml: navParts.join(""), docs, gallerySlug, panelDocsByEp, finalDocsByEp };
 }
 
 function buildGalleryDoc(charImages) {
@@ -556,14 +661,29 @@ function buildGalleryDoc(charImages) {
 // ------------------------------------------------------------
 // 인덱스 카드 렌더
 // ------------------------------------------------------------
-function renderWelcomeCards(tree, gallerySlug, charImages, panelDocsByEp) {
+function renderWelcomeCards(tree, gallerySlug, charImages, panelDocsByEp, finalDocsByEp) {
   const cards = [];
-  // 갤러리 카드(최상단)
+  // 1) 최종 웹툰 SVG (가장 중요한 산출물)
+  if (finalDocsByEp) {
+    if (finalDocsByEp.prologue_final && finalDocsByEp.prologue_final.length) {
+      const first = finalDocsByEp.prologue_final[0];
+      cards.push(
+        `<a class="card card-accent" href="#${first.slug}"><div class="card-title">프롤로그 최종 웹툰</div><div class="card-meta">SVG · 횡단보도 UI 누출</div></a>`
+      );
+    }
+    if (finalDocsByEp.ep01_final && finalDocsByEp.ep01_final.length) {
+      const first = finalDocsByEp.ep01_final[0];
+      cards.push(
+        `<a class="card card-accent" href="#${first.slug}"><div class="card-title">EP01 최종 웹툰</div><div class="card-meta">SVG · 필터의 누출</div></a>`
+      );
+    }
+  }
+  // 2) 비주얼 갤러리
   const totalImgs = Object.values(charImages).reduce((a, arr) => a + arr.length, 0);
   cards.push(
     `<a class="card card-accent" href="#${gallerySlug}"><div class="card-title">비주얼 갤러리</div><div class="card-meta">캐릭터 이미지 ${totalImgs}컷</div></a>`
   );
-  // EP01 패널 시퀀스 카드 (있으면 두 번째)
+  // 3) EP01 패널 시퀀스
   if (panelDocsByEp && panelDocsByEp.ep01_filter_leak) {
     cards.push(
       `<a class="card card-accent" href="#${panelDocsByEp.ep01_filter_leak.slug}"><div class="card-title">EP01 패널 시퀀스</div><div class="card-meta">러프 스크롤 16컷</div></a>`
@@ -665,18 +785,20 @@ ${scripts}
 // ------------------------------------------------------------
 function main() {
   ensureDir(OUT);
-  const { map: imgMap, charImages, storyboardPanels } = copyImages();
+  const { map: imgMap, charImages, storyboardPanels, finalWebtoons } = copyImages();
   const tree = collectTree();
-  const { navHtml, docs, gallerySlug, panelDocsByEp } = buildNavAndDocs(tree, imgMap, charImages, storyboardPanels);
-  const cards = renderWelcomeCards(tree, gallerySlug, charImages, panelDocsByEp);
+  const { navHtml, docs, gallerySlug, panelDocsByEp, finalDocsByEp } =
+    buildNavAndDocs(tree, imgMap, charImages, storyboardPanels, finalWebtoons);
+  const cards = renderWelcomeCards(tree, gallerySlug, charImages, panelDocsByEp, finalDocsByEp);
   const scripts = renderScripts(docs);
   const htmlOut = HTML({ navHtml, cards, scripts });
   fs.writeFileSync(path.join(OUT, "index.html"), htmlOut, "utf8");
   const imgCount = new Set(Object.values(imgMap)).size;
   const epCount = Object.keys(storyboardPanels).length;
   const panelCount = Object.values(storyboardPanels).reduce((a, e) => a + e.panels.length, 0);
+  const finalCount = Object.values(finalWebtoons || {}).reduce((a, arr) => a + arr.length, 0);
   console.log(`[OK] ${path.join(OUT, "index.html")}`);
-  console.log(`     docs: ${Object.keys(docs).length}, images: ${imgCount}, characters: ${Object.keys(charImages).length}, episodes: ${epCount} (${panelCount} panels)`);
+  console.log(`     docs: ${Object.keys(docs).length}, images: ${imgCount}, characters: ${Object.keys(charImages).length}, episodes: ${epCount} (${panelCount} panels), final SVGs: ${finalCount}`);
 }
 
 main();
