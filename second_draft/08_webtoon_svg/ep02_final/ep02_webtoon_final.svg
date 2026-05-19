@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="821" height="1916" viewBox="0 0 821 1916">
+  <title>EP02 최종 웹툰 - 신호를 읽는 사람</title>
+  <desc>이미지 생성 모델로 만든 2화 아트 시트 위에 대사와 AI 출력문을 합성한 최종 SVG.</desc>
+  <image href="assets/ep02_ai_generated_sheet.png" x="0" y="0" width="821" height="1916"/>
+  <g>
+    <rect x="16" y="14" width="210" height="32" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="121" y="35.4" font-size="15" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">01 새벽 분석실</text>
+  </g>
+  <g>
+    <rect x="42" y="238" width="250" height="52" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="167" y="259.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">태하</text><text x="167" y="283.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">노이즈 제거율 0으로.</text>
+  </g>
+  <g>
+    <rect x="16" y="326" width="230" height="32" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="131" y="347.4" font-size="15" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">02 데이터셋</text>
+  </g>
+  <g>
+    <rect x="385" y="332" width="270" height="82" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="520" y="344.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">station_noise_set_0217</text><text x="520" y="368.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">폐역_CCTV_1999</text><text x="520" y="392.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">부적_획_스캔</text><text x="520" y="416.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">keep raw noise</text>
+  </g>
+  <g>
+    <rect x="420" y="570" width="270" height="66" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="555" y="586.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">태하 독백</text><text x="555" y="610.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">사람은 버리고,</text><text x="555" y="634.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">기계는 남긴다.</text>
+  </g>
+  <g>
+    <rect x="16" y="696" width="170" height="32" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="101" y="717.4" font-size="15" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">04 02:17</text>
+  </g>
+  <g>
+    <rect x="560" y="694" width="180" height="48" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="650" y="725.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">틱</text>
+  </g>
+  <g>
+    <rect x="16" y="804" width="180" height="32" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="106" y="825.4" font-size="15" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">05 AI 출력</text>
+  </g>
+  <g>
+    <rect x="470" y="842" width="260" height="74" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="600" y="874.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">AI 출력</text><text x="600" y="898.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">도착하지 않음</text>
+  </g>
+  <g>
+    <rect x="22" y="920" width="250" height="52" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="147" y="941.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">태하</text><text x="147" y="965.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">반복 조건은 같고.</text>
+  </g>
+  <g>
+    <rect x="426" y="920" width="250" height="58" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="551" y="932.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">02:16:58</text><text x="551" y="956.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">02:16:59</text><text x="551" y="980.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">02:17:00</text>
+  </g>
+  <g>
+    <rect x="16" y="986" width="190" height="32" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="111" y="1007.4" font-size="15" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">07 세 레이어</text>
+  </g>
+  <g>
+    <rect x="418" y="1046" width="250" height="54" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="543" y="1068.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">AI 출력 조각</text><text x="543" y="1092.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">관측자... 교체...</text>
+  </g>
+  <g>
+    <rect x="300" y="1198" width="260" height="52" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="430" y="1231.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">같은 사람 아님</text>
+  </g>
+  <g>
+    <rect x="36" y="1218" width="270" height="54" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="171" y="1240.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">태하 독백</text><text x="171" y="1264.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">명칭은 아직 이르다.</text>
+  </g>
+  <g>
+    <rect x="16" y="1310" width="180" height="32" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="106" y="1331.4" font-size="15" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">10 익명 첨부</text>
+  </g>
+  <g>
+    <rect x="512" y="1388" width="230" height="50" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="627" y="1408.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">태하</text><text x="627" y="1432.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">누가 이걸...</text>
+  </g>
+  <g>
+    <rect x="16" y="1502" width="180" height="32" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="106" y="1523.4" font-size="15" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">11 매칭률</text>
+  </g>
+  <g>
+    <rect x="58" y="1558" width="230" height="50" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="173" y="1578.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">AI 출력</text><text x="173" y="1602.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">새 관측자 감지</text>
+  </g>
+  <g>
+    <rect x="330" y="1534" width="270" height="64" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="465" y="1549.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">태하</text><text x="465" y="1573.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">이건 영상 안에서</text><text x="465" y="1597.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">나온 게 아니야.</text>
+  </g>
+  <g>
+    <rect x="26" y="1440" width="270" height="54" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="161" y="1462.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">태하</text><text x="161" y="1486.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">현장에서 주운 겁니까?</text>
+  </g>
+  <g>
+    <rect x="16" y="1662" width="180" height="32" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="106" y="1683.4" font-size="15" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">14 첫 통화</text>
+  </g>
+  <g>
+    <rect x="330" y="1644" width="190" height="46" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="425" y="1662.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">서윤</text><text x="425" y="1686.2" font-size="20" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">누구세요.</text>
+  </g>
+  <g>
+    <rect x="520" y="1696" width="260" height="64" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="650" y="1711.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">태하</text><text x="650" y="1735.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">무섭다는 말은</text><text x="650" y="1759.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">아직 이릅니다.</text>
+  </g>
+  <g>
+    <rect x="34" y="1704" width="350" height="62" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="209" y="1730.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">태하</text><text x="209" y="1754.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">먼저 반복 조건부터 확인하죠.</text>
+  </g>
+  <g>
+    <rect x="16" y="1782" width="180" height="32" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="106" y="1803.4" font-size="15" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">16 훅</text>
+  </g>
+  <g>
+    <rect x="270" y="1842" width="300" height="56" rx="14" fill="rgba(255,255,255,.93)" stroke="#111" stroke-width="3"/>
+    <text x="420" y="1865.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">AI 출력</text><text x="420" y="1889.92" font-size="22" text-anchor="middle" fill="#111" font-family="Arial, 'Malgun Gothic', sans-serif" font-weight="900">관측자 교체 완료</text>
+  </g>
+</svg>

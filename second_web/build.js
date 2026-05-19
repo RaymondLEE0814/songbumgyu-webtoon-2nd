@@ -68,6 +68,7 @@ const LABEL = {
   "_review": "검수 템플릿",
   // 스토리보드 폴더
   "ep01_filter_leak": "EP01 · 필터의 누출",
+  "ep02_signal_interpreter": "EP02 · 신호를 읽는 사람",
   "prologue_crosswalk_ui_leak": "프롤로그 · 횡단보도 UI 누출",
   "panels": "패널",
   "review": "검증",
@@ -81,6 +82,9 @@ const LABEL = {
   "main_plot": "메인 플롯",
   "test_publication_strategy": "테스트 연재 전략",
   "ep01_draft": "1화 스크립트 초안",
+  "ep02_draft": "2화 스크립트 초안",
+  "ep02_story_plan": "2화 스토리 기획안",
+  "final_logic_check": "회차 논리 검증",
   "README": "개요(README)",
   "generation_queue": "이미지 생성 큐",
   "character_asset_review_template": "캐릭터 에셋 검수 템플릿",
@@ -88,6 +92,7 @@ const LABEL = {
   "asset_log": "에셋 작업 로그",
   "consistency_check": "일관성 체크",
   "ep01_storyboard": "EP01 스토리보드",
+  "ep02_storyboard": "EP02 스토리보드",
   "prologue_storyboard": "프롤로그 스토리보드",
   "prologue_draft": "프롤로그 스크립트 초안",
   "panel_list": "컷 리스트",
@@ -300,15 +305,18 @@ const STORYBOARD_SEQUENCES = {
 
 const EPISODE_LABEL = {
   ep01_filter_leak: "EP01 · 필터의 누출",
+  ep02_signal_interpreter: "EP02 · 신호를 읽는 사람",
 };
 
 // 08_webtoon_svg 폴더명 라벨 (한국어)
 const FINAL_EP_LABEL = {
   ep01_final: "EP01 · 필터의 누출",
+  ep02_final: "EP02 · 신호를 읽는 사람",
   prologue_final: "프롤로그 · 횡단보도 UI 누출",
 };
 function finalFileLabel(file) {
   if (/dialogue/i.test(file)) return "대사 강화판";
+  if (/image_model/i.test(file)) return "이미지 생성 모델 본";
   return "최종본";
 }
 
@@ -559,7 +567,7 @@ function buildNavAndDocs(tree, imgMap, charImages, storyboardPanels, finalWebtoo
 
   // ---- 가상 섹션: 최종 웹툰 SVG (최상단, 가장 중요) ----
   const finalDocsByEp = {};
-  const FINAL_EP_ORDER = ["prologue_final", "ep01_final"];
+  const FINAL_EP_ORDER = ["prologue_final", "ep01_final", "ep02_final"];
   const epKeysInOrder = [
     ...FINAL_EP_ORDER.filter((k) => finalWebtoons && finalWebtoons[k]),
     ...Object.keys(finalWebtoons || {}).filter((k) => !FINAL_EP_ORDER.includes(k)),
@@ -675,6 +683,12 @@ function renderWelcomeCards(tree, gallerySlug, charImages, panelDocsByEp, finalD
       const first = finalDocsByEp.ep01_final[0];
       cards.push(
         `<a class="card card-accent" href="#${first.slug}"><div class="card-title">EP01 최종 웹툰</div><div class="card-meta">SVG · 필터의 누출</div></a>`
+      );
+    }
+    if (finalDocsByEp.ep02_final && finalDocsByEp.ep02_final.length) {
+      const first = finalDocsByEp.ep02_final[0];
+      cards.push(
+        `<a class="card card-accent" href="#${first.slug}"><div class="card-title">EP02 최종 웹툰</div><div class="card-meta">SVG · 신호를 읽는 사람</div></a>`
       );
     }
   }
